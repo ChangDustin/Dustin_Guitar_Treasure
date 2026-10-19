@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "rev": "2026-10-19T08:30:00.000Z",
+  "site": {
+    "title": "小齊的吉他寶庫",
+    "subtitle": "每一首練過的歌，都值得被好好收藏",
+    "github": {
+      "owner": "ChangDustin",
+      "repo": "Dustin_Guitar_Treasure",
+      "branch": "main"
+    },
+    "admin": {
+      "salt": "v+CYctdvZaDkFZz5dNSWXA==",
+      "hash": "nD+CAQ8zRGdqNQOnR9bb8uk5XSLFnJp1KdkqDLyPs+w=",
+      "iter": 150000
+    }
+  },
+  "songs": [
+    {
+      "id": "summer",
+      "title": "Summer",
+      "artist": "久石讓",
+      "arranger": "Shin Izumi",
+      "level": "中階",
+      "status": "已學會",
+      "tuning": "標準調弦（Standard）",
+      "capo": 2,
+      "bpm": 92,
+      "tags": [
+        "指彈",
+        "電影配樂",
+        "久石讓"
+      ],
+      "cover": "assets/covers/summer.jpg",
+      "pdf": {
+        "path": "assets/tabs/summer.pdf",
+        "pages": 1,
+        "totalPages": 2,
+        "preview": true
+      },
+      "videos": [
+        {
+          "label": "參考演奏 · Shin Izumi",
+          "url": "https://www.youtube.com/watch?v=UvwfWxI97ao"
+        }
+      ],
+      "source": {
+        "name": "Shin Izumi",
+        "url": ""
+      },
+      "notes": "電影《菊次郎的夏天》主題曲，Shin Izumi 的編曲。\n・標準調弦、Capo 2，♩ = 92\n・開頭整段 P.M.（悶音）分解和弦，右手掌根輕靠琴橋\n・中段的搥音（H）與勾音（P）要乾淨，不要搶拍",
+      "createdAt": "2026-10-19T08:10:00.000Z",
+      "updatedAt": "2026-10-19T08:10:00.000Z"
+    },
+    {
+      "id": "like-a-star",
+      "title": "Like A Star",
+      "artist": "Youngso Kim 金永所",
+      "arranger": "林慶義 Chi-Yi Lin（探吉日）",
+      "level": "高階",
+      "status": "想學",
+      "tuning": "特殊調弦：①D ②A ⑤G ⑥C",
+      "capo": 2,
+      "bpm": 60,
+      "tags": [
+        "指彈",
+        "特殊調弦",
+        "探吉日"
+      ],
+      "cover": "assets/covers/like-a-star.jpg",
+      "pdf": {
+        "path": "assets/tabs/like-a-star.pdf",
+        "pages": 2,
+        "totalPages": 10,
+        "preview": true
+      },
+      "videos": [
+        {
+          "label": "探吉日 TAB 示範 · 林慶義",
+          "url": "https://www.youtube.com/watch?v=hvikpVxTFcE"
+        },
+        {
+          "label": "原曲 Official MV · Youngso Kim",
+          "url": "https://www.youtube.com/watch?v=ukM_JPc1LNE"
+        }
+      ],
+      "source": {
+        "name": "探吉日 Tanji Day",
+        "url": "https://www.tanjidayguitar.com/"
+      },
+      "notes": "探吉日林慶義老師採譜，譜上有很詳細的左手運指。\n・特殊調弦：①=D ②=A ⑤=G ⑥=C（③④弦不變），Capo 2\n・♩ = 60，前奏是自由拍（Free time）\n・譜上有標運指的段落都是容易卡住的地方，先慢速練熟",
+      "createdAt": "2026-10-19T08:20:00.000Z",
+      "updatedAt": "2026-10-19T08:20:00.000Z"
+    },
+    {
+      "id": "river-flows-in-you",
+      "title": "River Flows in You",
+      "artist": "Yiruma 이루마",
+      "arranger": "Sungha Jung",
+      "level": "中進階",
+      "status": "練習中",
+      "tuning": "降半音（E♭ Standard）",
+      "capo": 5,
+      "bpm": 67,
+      "tags": [
+        "指彈",
+        "鋼琴改編",
+        "Sungha Jung"
+      ],
+      "cover": "assets/covers/river-flows-in-you.jpg",
+      "pdf": {
+        "path": "assets/tabs/river-flows-in-you.pdf",
+        "pages": 2,
+        "totalPages": 9,
+        "preview": true
+      },
+      "videos": [
+        {
+          "label": "參考演奏 · Sungha Jung（2022）",
+          "url": "https://www.youtube.com/watch?v=_05OZ0Ij--Y"
+        }
+      ],
+      "source": {
+        "name": "Musicnotes",
+        "url": "https://www.musicnotes.com/"
+      },
+      "notes": "Sungha Jung 2022 年版本的編曲。\n・整把降半音（E♭ A♭ D♭ G♭ B♭ E♭），Capo 5，♩ = 67\n・前奏 C#m7 → Asus2 的分解和弦，要讓上方旋律音浮出來\n・Verse 開始旋律變密，先分手慢練再合起來",
+      "createdAt": "2026-10-19T08:30:00.000Z",
+      "updatedAt": "2026-10-19T08:30:00.000Z"
+    }
+  ]
+}

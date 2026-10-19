@@ -1,0 +1,2309 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小齊的吉他寶庫</title>
+<meta name="description" content="小齊的吉他練習紀錄：每首歌的 TAB 譜預覽、吉他影片與練習筆記。">
+<meta name="theme-color" content="#f7f6f3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 2.5c9.6 0 16.5 3.6 16.5 10.4 0 9.4-9.3 19.5-16.5 24.6C12.8 32.4 3.5 22.3 3.5 12.9 3.5 6.1 10.4 2.5 20 2.5Z' fill='%23b06f32'/%3E%3Ccircle cx='20' cy='15.5' r='5.2' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   設計變數（淺色 / 深色）
+   ========================================================= */
+:root{
+  --bg:#f7f6f3; --bg-2:#efede8; --surface:#fff; --surface-2:#f8f7f4;
+  --ink:#1c2230; --ink-2:#4f5868; --ink-3:#8a919d;
+  --line:#e7e4dd; --line-2:#d8d4ca;
+  --accent:#b06f32; --accent-2:#8f5524; --accent-soft:#f6eadc;
+  --danger:#c2413b; --ok:#2f8a57; --warn:#d68a14;
+  --lv1:#2f7d55; --lv1-bg:#e2f2e8;
+  --lv2:#1f7686; --lv2-bg:#ddf0f3;
+  --lv3:#2d6597; --lv3-bg:#e1ecf7;
+  --lv4:#5f46a8; --lv4-bg:#ebe6f8;
+  --st0:#8a919d; --st1:#cf7f12; --st2:#2f8a57;
+  --shadow-sm:0 1px 2px rgba(28,34,48,.06);
+  --shadow:0 1px 2px rgba(28,34,48,.05),0 12px 30px -12px rgba(28,34,48,.18);
+  --shadow-lg:0 30px 60px -20px rgba(28,34,48,.38);
+  --header-h:68px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#12151b; --bg-2:#1a1e26; --surface:#1b2029; --surface-2:#20262f;
+    --ink:#eef0f4; --ink-2:#b8bec9; --ink-3:#818998;
+    --line:#2a303b; --line-2:#3a414e;
+    --accent:#d9995a; --accent-2:#e8b27c; --accent-soft:#33271c;
+    --lv1:#86d6a8; --lv1-bg:#1b3327; --lv2:#7fd3df; --lv2-bg:#15323a;
+    --lv3:#93bdec; --lv3-bg:#1b2b3e; --lv4:#bba7f2; --lv4-bg:#2a2342;
+    --st0:#8b93a1; --st1:#f0a440; --st2:#62c58c;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.4);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -12px rgba(0,0,0,.6);
+    --shadow-lg:0 30px 60px -20px rgba(0,0,0,.75);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12151b; --bg-2:#1a1e26; --surface:#1b2029; --surface-2:#20262f;
+  --ink:#eef0f4; --ink-2:#b8bec9; --ink-3:#818998;
+  --line:#2a303b; --line-2:#3a414e;
+  --accent:#d9995a; --accent-2:#e8b27c; --accent-soft:#33271c;
+  --lv1:#86d6a8; --lv1-bg:#1b3327; --lv2:#7fd3df; --lv2-bg:#15323a;
+  --lv3:#93bdec; --lv3-bg:#1b2b3e; --lv4:#bba7f2; --lv4-bg:#2a2342;
+  --st0:#8b93a1; --st1:#f0a440; --st2:#62c58c;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.4);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -12px rgba(0,0,0,.6);
+  --shadow-lg:0 30px 60px -20px rgba(0,0,0,.75);
+  color-scheme:dark;
+}
+
+/* =========================================================
+   基本
+   ========================================================= */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--header-h) + 76px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "Inter","Noto Sans TC",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+body.no-scroll{overflow:hidden}
+main{flex:1}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+img{max-width:100%}
+h1,h2,h3{letter-spacing:.01em}
+.wrap{width:100%;max-width:1220px;margin:0 auto;padding:0 28px}
+.i{width:18px;height:18px;flex:none}
+.grow{flex:1}
+.hint{font-size:12.5px;color:var(--ink-3);margin:0;line-height:1.6}
+.center{text-align:center}
+kbd{font:600 11px/1 "Inter",monospace;padding:3px 6px;border-radius:6px;border:1px solid var(--line-2);color:var(--ink-3);background:var(--surface-2)}
+code{font:13px "Consolas",monospace;background:var(--bg-2);padding:2px 6px;border-radius:6px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* 按鈕 */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:40px;padding:0 16px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);font-weight:600;font-size:14px;cursor:pointer;transition:background .15s,border-color .15s,transform .1s,box-shadow .15s;white-space:nowrap;text-decoration:none}
+.btn:hover{border-color:var(--ink-3)}
+.btn:active{transform:translateY(1px)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.btn.primary:hover{opacity:.9}
+.btn.accent{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.accent:hover{background:var(--accent-2);border-color:var(--accent-2)}
+.btn.danger{color:var(--danger)}
+.btn.danger.solid{background:var(--danger);border-color:var(--danger);color:#fff}
+.btn.ghost{background:transparent;border-color:transparent}
+.btn.ghost:hover{background:var(--bg-2)}
+.btn.sm{height:34px;padding:0 12px;font-size:13px;border-radius:10px}
+.btn .i{width:16px;height:16px}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:inline-grid;place-items:center;color:var(--ink-2);cursor:pointer;transition:.15s;flex:none}
+.icon-btn:hover{color:var(--ink);border-color:var(--line-2);background:var(--surface-2)}
+.icon-btn.sm{width:34px;height:34px;border-radius:10px}
+.icon-btn.sm .i{width:16px;height:16px}
+
+/* =========================================================
+   頁首
+   ========================================================= */
+.topbar{position:sticky;top:0;z-index:50;height:var(--header-h);background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:saturate(1.5) blur(14px);-webkit-backdrop-filter:saturate(1.5) blur(14px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:20px;height:100%}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;min-width:0}
+.logo{width:40px;height:40px;flex:none;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.brand:hover .logo{transform:rotate(-12deg) scale(1.06)}
+.brand b{display:block;font-size:17px;font-weight:900;line-height:1.2;letter-spacing:.04em;white-space:nowrap}
+.brand small{display:block;font-size:12px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav{display:flex;gap:2px;margin-left:18px}
+.nav a{padding:8px 13px;border-radius:10px;color:var(--ink-2);font-weight:500;font-size:15px;text-decoration:none;transition:.15s}
+.nav a:hover{background:var(--bg-2);color:var(--ink)}
+.nav a.on{color:var(--ink);font-weight:700}
+.top-actions{margin-left:auto;display:flex;gap:8px;align-items:center;position:relative}
+.admin-pill{background:var(--accent)!important;border-color:var(--accent)!important;color:#fff!important}
+.menu{position:absolute;right:0;top:calc(100% + 10px);background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:6px;min-width:220px;z-index:70;animation:pop-in .18s cubic-bezier(.2,.8,.2,1)}
+.menu button{display:flex;width:100%;gap:10px;align-items:center;padding:10px 12px;border:0;background:none;border-radius:10px;color:var(--ink);font-size:14px;cursor:pointer;text-align:left}
+.menu button:hover{background:var(--bg-2)}
+.menu hr{border:0;border-top:1px solid var(--line);margin:6px 4px}
+.menu .badge{margin-left:auto;background:var(--warn);color:#fff;font-size:11px;font-weight:700;border-radius:999px;padding:1px 7px}
+
+/* =========================================================
+   首頁主視覺 + 吉他指板
+   ========================================================= */
+.hero{margin:28px 0 6px;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.2fr);gap:36px;align-items:center;padding:38px 40px;border-radius:28px;background:radial-gradient(900px 380px at -10% -20%,var(--accent-soft),transparent 65%),var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.eyebrow{font:800 12px/1 "Inter",sans-serif;letter-spacing:.2em;color:var(--accent);margin:0}
+.hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.08;margin:14px 0 12px;font-weight:900}
+.hero h1 span{color:var(--accent)}
+.lead{color:var(--ink-2);font-size:16px;margin:0 0 26px}
+.stats{display:flex;flex-wrap:wrap;gap:12px 28px}
+.stats div{min-width:64px}
+.stats b{display:block;font:800 30px/1.1 "Inter",sans-serif;font-variant-numeric:tabular-nums}
+.stats span{font-size:12.5px;color:var(--ink-3)}
+.fb-wrap{position:relative}
+.fb{position:relative;height:186px;border-radius:14px;cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none;overflow:hidden;
+  background:
+    repeating-linear-gradient(180deg,rgba(255,255,255,.025) 0 2px,transparent 2px 7px),
+    linear-gradient(180deg,#5a3824,#3b2416 55%,#2c1a10);
+  box-shadow:inset 0 2px 10px rgba(0,0,0,.55),0 22px 40px -18px rgba(58,36,24,.75)}
+.fb-head{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#2a1a10,#3d2617);box-shadow:inset -6px 0 10px rgba(0,0,0,.35)}
+.fb-nut{position:absolute;top:0;bottom:0;width:9px;transform:translateX(-100%);background:linear-gradient(90deg,#d9cfbb,#f7f2e6 45%,#cfc4ad);box-shadow:2px 0 4px rgba(0,0,0,.35)}
+.fb-fret{position:absolute;top:0;bottom:0;width:3px;transform:translateX(-50%);background:linear-gradient(90deg,#7d838a,#eef2f5 50%,#7d838a);box-shadow:1px 0 2px rgba(0,0,0,.4)}
+.fb-dot{position:absolute;width:13px;height:13px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 35% 35%,#fffaf0,#d9cdb5);opacity:.88}
+.fb-str{position:absolute;left:0;right:0;height:24px;transform:translateY(-50%);z-index:2}
+.fb-str i{position:absolute;left:0;right:0;top:50%;height:var(--t);transform:translateY(-50%);border-radius:2px;background:linear-gradient(180deg,#fff,#cfd3d6 45%,#80868c);box-shadow:0 2px 3px rgba(0,0,0,.55)}
+.fb-str.wound i{background:repeating-linear-gradient(90deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px),linear-gradient(180deg,#fbe7c4,#c79a5e 45%,#6f512c)}
+.fb-str:hover i{filter:brightness(1.25)}
+.fb-str.vib i{animation:vib .75s linear;filter:drop-shadow(0 0 5px rgba(255,214,150,.9)) brightness(1.3)}
+@keyframes vib{0%,100%{transform:translateY(-50%)}8%{transform:translateY(calc(-50% + 3px))}16%{transform:translateY(calc(-50% - 3px))}26%{transform:translateY(calc(-50% + 2.3px))}36%{transform:translateY(calc(-50% - 2.3px))}48%{transform:translateY(calc(-50% + 1.5px))}60%{transform:translateY(calc(-50% - 1.5px))}72%{transform:translateY(calc(-50% + .8px))}84%{transform:translateY(calc(-50% - .5px))}}
+.fb-names{position:absolute;left:0;top:0;bottom:0;z-index:3;pointer-events:none}
+.fb-names span{position:absolute;left:10px;transform:translateY(-50%);font:700 11px/1 "Inter",sans-serif;color:#f1dcc0;opacity:.85;text-shadow:0 0 3px #000,0 0 2px #000}
+.fb-nums{position:relative;height:22px;margin-top:6px}
+.fb-nums span{position:absolute;transform:translateX(-50%);font:600 11px/22px "Inter",sans-serif;color:var(--ink-3)}
+.fb-pop{position:absolute;z-index:5;transform:translate(-50%,-50%);background:var(--accent);color:#fff;font:800 12px/1 "Inter",sans-serif;padding:5px 8px;border-radius:999px;pointer-events:none;box-shadow:0 4px 12px rgba(0,0,0,.3);animation:note-pop .95s ease-out forwards}
+@keyframes note-pop{0%{opacity:0;transform:translate(-50%,-30%) scale(.6)}15%{opacity:1;transform:translate(-50%,-110%) scale(1.05)}70%{opacity:1}100%{opacity:0;transform:translate(-50%,-190%) scale(.95)}}
+.fb-bar{display:flex;align-items:center;gap:10px;margin-top:4px;font-size:13px;color:var(--ink-3)}
+.fb-bar .btn{margin-left:auto}
+
+/* =========================================================
+   工具列
+   ========================================================= */
+.toolbar{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.search{position:relative;flex:1 1 230px;max-width:340px}
+.search .i{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--ink-3);pointer-events:none}
+.search input{width:100%;height:42px;padding:0 40px 0 40px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);font:inherit;font-size:14.5px;transition:border-color .15s,box-shadow .15s}
+.search input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.search kbd{position:absolute;right:11px;top:50%;transform:translateY(-50%)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{height:34px;padding:0 13px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);font-size:13px;font-weight:600;color:var(--ink-2);cursor:pointer;transition:.15s;white-space:nowrap}
+.chip:hover{border-color:var(--ink-3);color:var(--ink)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tb-right{display:flex;gap:8px;align-items:center;margin-left:auto;flex-wrap:wrap}
+.sel{height:38px;border-radius:11px;border:1px solid var(--line-2);background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a919d' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 9px center/15px;color:var(--ink);padding:0 30px 0 12px;font:inherit;font-size:13.5px;font-weight:500;appearance:none;-webkit-appearance:none;cursor:pointer}
+.seg{display:inline-flex;background:var(--bg-2);border-radius:12px;padding:3px;gap:2px}
+.seg button{height:32px;width:38px;display:grid;place-items:center;border:0;border-radius:9px;background:transparent;color:var(--ink-3);cursor:pointer}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:var(--shadow-sm)}
+.result-head{display:flex;align-items:baseline;gap:12px;margin:26px 0 0}
+.result-head h2{font-size:24px;margin:0;font-weight:900}
+.count{color:var(--ink-3);font-size:14px}
+.result-head .btn{margin-left:auto;align-self:center}
+
+/* =========================================================
+   歌曲方塊
+   ========================================================= */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px;padding:20px 0 44px}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);
+  transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px));
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .3s,border-color .3s;
+  animation:rise .55s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0) * 45ms)}
+.card:hover{--ty:-6px;box-shadow:var(--shadow-lg);border-color:var(--line-2)}
+.card.tilting{transition:transform .08s linear,box-shadow .3s,border-color .3s}
+.card.pick{outline:3px solid var(--accent);outline-offset:3px;--ty:-8px}
+.card-cover{position:relative;aspect-ratio:1;overflow:hidden;background:var(--bg-2)}
+.card-cover>img,.card-cover>.cover-gen{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card-cover>img,.card:hover .card-cover>.cover-gen{transform:scale(1.07)}
+.card-cover::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,30%),rgba(255,255,255,.32),transparent 45%),linear-gradient(180deg,transparent 60%,rgba(0,0,0,.28));opacity:.0;transition:opacity .3s}
+.card:hover .card-cover::after{opacity:1}
+.on-cover{position:absolute;left:12px;top:12px;z-index:1;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.vflag{position:absolute;right:12px;bottom:12px;z-index:1;display:inline-flex;align-items:center;gap:4px;background:rgba(17,20,27,.66);color:#fff;border-radius:999px;font-size:12px;font-weight:600;padding:4px 10px 4px 8px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.vflag .i{width:12px;height:12px}
+.card-body{padding:14px 16px 16px}
+.card h3{margin:0;font-size:17px;font-weight:700;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card h3 a,.row h3 a{color:inherit;text-decoration:none}
+.stretched::after{content:"";position:absolute;inset:0;z-index:1}
+.artist{margin:3px 0 12px;color:var(--ink-3);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--ink-3)}
+.pg{display:inline-flex;align-items:center;gap:4px}
+.pg .i{width:14px;height:14px}
+.card-admin,.row-admin{position:absolute;z-index:3;display:flex;gap:6px}
+.card-admin{top:10px;right:10px}
+.card-admin button,.row-admin button{height:30px;padding:0 10px;border-radius:9px;border:0;background:rgba(255,255,255,.94);color:#1c2230;font-weight:700;font-size:12px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.18);display:inline-flex;align-items:center;gap:4px}
+.card-admin button:hover,.row-admin button:hover{background:#fff}
+.card-admin .i,.row-admin .i{width:13px;height:13px}
+.card-admin .del,.row-admin .del{color:#c2413b}
+.card.add{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:2px dashed var(--line-2);background:transparent;box-shadow:none;min-height:300px;cursor:pointer;color:var(--ink-3);font-weight:700;font-size:15px}
+.card.add:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.card.add .plus{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:var(--surface);box-shadow:var(--shadow)}
+.cover-gen{display:grid;place-items:center;overflow:hidden;color:rgba(255,255,255,.96);font-weight:900;font-size:clamp(40px,7vw,78px);
+  background:radial-gradient(circle at 50% 50%,transparent 31%,rgba(255,255,255,.18) 31.5%,transparent 34%,transparent 39%,rgba(255,255,255,.1) 39.5%,transparent 41%),linear-gradient(140deg,hsl(var(--h) 58% 62%),hsl(calc(var(--h) + 38) 55% 38%))}
+.cover-gen span{text-shadow:0 4px 18px rgba(0,0,0,.25)}
+@keyframes rise{from{opacity:0;transform:translateY(22px) scale(.97)}}
+
+/* 列表檢視（仿探吉日雙欄列表） */
+.list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin:20px 0 44px}
+.row{position:relative;display:flex;align-items:center;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line);transition:background .15s;animation:fade .4s backwards;animation-delay:calc(var(--i,0) * 25ms)}
+.row:nth-child(odd){border-right:1px solid var(--line)}
+.row:hover{background:var(--surface)}
+.row-thumb{position:relative;width:58px;height:58px;border-radius:13px;overflow:hidden;flex:none;background:var(--bg-2)}
+.row-thumb>img,.row-thumb>.cover-gen{width:100%;height:100%;object-fit:cover;font-size:24px}
+.row-main{flex:1;min-width:0}
+.row h3{font-size:16px;margin:0;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .artist{margin:1px 0 0}
+.row .chev{color:var(--ink-3);transition:transform .2s}
+.row:hover .chev{transform:translateX(3px);color:var(--ink)}
+.row-admin{position:relative;z-index:3}
+.row-admin button{box-shadow:none;border:1px solid var(--line-2);background:var(--surface);color:var(--ink)}
+.empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--ink-3)}
+.empty b{display:block;color:var(--ink);font-size:18px;margin:10px 0 4px}
+
+/* 徽章 */
+.lv{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:7px;font-size:12px;font-weight:700;letter-spacing:.06em;border:1px solid;white-space:nowrap}
+.lv-1{color:var(--lv1);background:var(--lv1-bg);border-color:color-mix(in srgb,var(--lv1) 28%,transparent)}
+.lv-2{color:var(--lv2);background:var(--lv2-bg);border-color:color-mix(in srgb,var(--lv2) 28%,transparent)}
+.lv-3{color:var(--lv3);background:var(--lv3-bg);border-color:color-mix(in srgb,var(--lv3) 28%,transparent)}
+.lv-4{color:var(--lv4);background:var(--lv4-bg);border-color:color-mix(in srgb,var(--lv4) 28%,transparent)}
+.st{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.st::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 3px color-mix(in srgb,currentColor 18%,transparent)}
+.st-0{color:var(--st0)}.st-1{color:var(--st1)}.st-2{color:var(--st2)}
+.tag{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:7px;background:var(--bg-2);color:var(--ink-2);font-size:12px;font-weight:600}
+
+/* 關於 */
+.about{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:8px 0 56px}
+.about h2{grid-column:1/-1;font-size:22px;margin:0 0 4px;font-weight:900}
+.about .panel h3{margin:8px 0 6px;font-size:16px}
+.about .panel p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.75}
+.about .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+
+/* =========================================================
+   歌曲頁
+   ========================================================= */
+.back{display:inline-flex;align-items:center;gap:4px;color:var(--ink-2);text-decoration:none;font-size:15px;margin:24px 0 16px;padding:4px 8px 4px 2px;border-radius:8px}
+.back:hover{color:var(--ink);background:var(--bg-2)}
+.detail{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:28px;align-items:start;animation:fade .35s}
+.side{display:flex;flex-direction:column;gap:16px;min-width:0}
+.song-title h1{font-size:30px;line-height:1.2;margin:0 0 6px;font-weight:900;word-break:break-word}
+.by{color:var(--ink-2);font-size:15px;margin:0}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px}
+.panel-title{display:flex;align-items:center;gap:8px;font-weight:800;font-size:14.5px;margin:0 0 12px}
+.panel-title .i{color:var(--accent)}
+.video-box{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#0d0f13}
+.video-box iframe,.video-box video{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#000}
+.video-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#8a919d;font-size:14px}
+.video-empty .i{width:30px;height:30px}
+.vtabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.vtabs .chip{height:30px;font-size:12.5px}
+.vcap{margin:10px 0 0;font-size:13px;color:var(--ink-3)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;margin:0}
+.facts dt{font-size:12px;color:var(--ink-3)}
+.facts dd{margin:2px 0 0;font-weight:700;font-size:14.5px}
+.metro{display:flex;align-items:center;gap:6px}
+.metro .bpm{flex:1;text-align:center;line-height:1}
+.metro .bpm b{display:block;font:800 30px/1 "Inter",sans-serif;font-variant-numeric:tabular-nums}
+.metro .bpm small{font-size:11px;color:var(--ink-3);letter-spacing:.12em}
+.metro .icon-btn{font:700 12px "Inter",sans-serif}
+.metro .play{width:44px;height:44px;padding:0;border-radius:50%;margin-left:6px}
+.beats{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.beats i{width:12px;height:12px;border-radius:50%;background:var(--line-2);transition:transform .08s,background .08s}
+.beats i.on{background:var(--accent);transform:scale(1.35)}
+.beats i.on:first-child{background:var(--danger)}
+.notes{white-space:pre-wrap;color:var(--ink-2);font-size:14.5px;line-height:1.8;margin:0}
+.source{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;text-decoration:none}
+.source:hover{text-decoration:underline}
+.source .i{width:15px;height:15px}
+.sheet{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.sheet-head{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;padding:12px 14px 12px 20px;border-bottom:1px solid var(--line)}
+.sheet-head h2{font-size:18px;margin:0;font-weight:900}
+.sheet-head small{font-size:12px;color:var(--ink-3)}
+.sheet-tools{margin-left:auto;display:flex;gap:6px;align-items:center}
+.pgi{font:600 13px "Inter",sans-serif;color:var(--ink-2);font-variant-numeric:tabular-nums;margin-right:6px;white-space:nowrap}
+.zlabel{min-width:56px;height:34px;border:0;background:var(--bg-2);border-radius:10px;font:700 12.5px "Inter",sans-serif;color:var(--ink-2);cursor:pointer}
+.sheet-scroll{position:relative;height:calc(100vh - var(--header-h) - 140px);min-height:540px;overflow:auto;background:var(--bg-2);padding:22px 20px;overscroll-behavior:contain}
+.pages{margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.page{position:relative;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.14);border-radius:4px;overflow:hidden;width:100%}
+.page canvas{display:block;width:100%;height:100%}
+.page.loading{background:linear-gradient(100deg,#fff 30%,#f1f1f1 50%,#fff 70%) 0 0/300% 100%;animation:shimmer 1.4s linear infinite}
+.page .pno{position:absolute;bottom:8px;right:10px;font:600 11px "Inter",sans-serif;color:#9aa0a8;background:rgba(255,255,255,.85);padding:2px 6px;border-radius:6px}
+.sheet-msg{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;color:var(--ink-3);min-height:420px}
+.sheet-msg .i{width:36px;height:36px}
+.sheet-note{display:flex;gap:8px;align-items:flex-start;padding:12px 18px;font-size:13px;color:var(--ink-2);border-top:1px solid var(--line);background:var(--accent-soft)}
+.sheet-note .i{width:16px;height:16px;color:var(--accent);margin-top:2px}
+.sheet:fullscreen{border-radius:0;border:0}
+.sheet:fullscreen .sheet-scroll,.sheet.pseudo-full .sheet-scroll{height:auto;flex:1}
+.sheet.pseudo-full{position:fixed;inset:0;z-index:120;border-radius:0}
+.prevnext{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0 56px}
+.pn{display:flex;flex-direction:column;gap:2px;padding:16px 20px;border-radius:16px;border:1px solid var(--line);background:var(--surface);text-decoration:none;color:inherit;transition:.2s}
+.pn:hover{border-color:var(--line-2);box-shadow:var(--shadow);transform:translateY(-2px)}
+.pn small{color:var(--ink-3);font-size:12.5px}
+.pn b{font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn.next{text-align:right}
+.notfound{text-align:center;padding:80px 20px}
+
+/* =========================================================
+   對話框 / 表單
+   ========================================================= */
+.modal-back{position:fixed;inset:0;z-index:100;background:rgba(12,14,20,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);display:grid;place-items:center;padding:20px;animation:fade .2s}
+.modal-back.out{animation:fade .18s reverse forwards}
+.modal{width:min(540px,100%);max-height:calc(100vh - 40px);display:flex;flex-direction:column;background:var(--surface);border-radius:22px;box-shadow:var(--shadow-lg);animation:pop-in .26s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.modal.wide{width:min(820px,100%)}
+.modal-head{display:flex;align-items:center;gap:12px;padding:16px 18px 16px 24px;border-bottom:1px solid var(--line)}
+.modal-head h2{font-size:18px;margin:0;font-weight:800;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.modal-body{padding:22px 24px;overflow:auto;flex:1}
+.modal-foot{display:flex;gap:10px;justify-content:flex-end;align-items:center;padding:14px 24px;border-top:1px solid var(--line);background:var(--surface)}
+.confirm-text{margin:0;font-size:15px;line-height:1.7}
+.form{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px 14px}
+.field{display:flex;flex-direction:column;gap:6px;grid-column:span 6;min-width:0}
+.field.s2{grid-column:span 2}.field.s3{grid-column:span 3}
+.field>label,.label{font-size:13px;font-weight:700;color:var(--ink-2)}
+.field input:not([type=file]):not([type=range]),.field select,.field textarea,.inp{width:100%;height:42px;border-radius:11px;border:1px solid var(--line-2);background:var(--surface-2);color:var(--ink);padding:0 12px;font:inherit;font-size:15px;transition:border-color .15s,box-shadow .15s}
+.field textarea{height:auto;min-height:100px;padding:10px 12px;resize:vertical;line-height:1.6}
+.field input:focus,.field select:focus,.field textarea:focus,.inp:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.field input:disabled{opacity:.55}
+.sec-title{grid-column:span 6;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin:8px 0 -6px;padding-top:12px;border-top:1px dashed var(--line-2)}
+.cover-edit{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.cover-edit .thumb{position:relative;width:128px;height:128px;border-radius:18px;overflow:hidden;flex:none;border:1px solid var(--line);background:var(--bg-2)}
+.cover-edit .thumb>img,.cover-edit .thumb>.cover-gen{width:100%;height:100%;object-fit:cover;font-size:48px}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.file-box{border:1.5px dashed var(--line-2);border-radius:16px;padding:14px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.pdf-thumb{width:76px;height:100px;background:#fff;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15);flex:none;overflow:hidden;display:grid;place-items:center;color:#aab}
+.pdf-thumb canvas{width:100%;height:100%;object-fit:cover;display:block}
+.file-info{flex:1;min-width:200px;display:flex;flex-direction:column;gap:10px}
+.file-info .name{font-weight:700;font-size:14px;word-break:break-all}
+.range-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.range-row label{font-size:13px;font-weight:700;color:var(--ink-2)}
+.range-row .inp{width:150px;height:36px;font-size:14px}
+.vlist{display:flex;flex-direction:column;gap:8px}
+.vrow{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr) auto auto;gap:8px;align-items:center}
+.vrow .inp{height:38px;font-size:14px}
+.set-sec{padding:18px 0;border-bottom:1px solid var(--line)}
+.set-sec:first-child{padding-top:0}
+.set-sec:last-child{border-bottom:0;padding-bottom:0}
+.set-sec h3{margin:0 0 4px;font-size:15.5px}
+.set-sec .form{margin-top:12px}
+.set-sec .btn-row{margin-top:12px}
+.err{color:var(--danger);font-size:13.5px;margin:8px 0 0;font-weight:600}
+.shake{animation:shake .4s}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+
+/* 裁切器 */
+.crop-stage{position:relative;width:min(380px,74vw);aspect-ratio:1;margin:0 auto;overflow:hidden;border-radius:18px;background:#111;touch-action:none;cursor:grab;user-select:none}
+.crop-stage.drag{cursor:grabbing}
+.crop-stage img{position:absolute;left:0;top:0;transform-origin:0 0;max-width:none;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.crop-grid{position:absolute;inset:0;pointer-events:none;border-radius:18px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.85);
+  background:linear-gradient(90deg,transparent calc(33.33% - .5px),rgba(255,255,255,.45) calc(33.33% - .5px) calc(33.33% + .5px),transparent calc(33.33% + .5px) calc(66.66% - .5px),rgba(255,255,255,.45) calc(66.66% - .5px) calc(66.66% + .5px),transparent calc(66.66% + .5px)),
+             linear-gradient(180deg,transparent calc(33.33% - .5px),rgba(255,255,255,.45) calc(33.33% - .5px) calc(33.33% + .5px),transparent calc(33.33% + .5px) calc(66.66% - .5px),rgba(255,255,255,.45) calc(66.66% - .5px) calc(66.66% + .5px),transparent calc(66.66% + .5px))}
+.crop-zoom{display:flex;gap:12px;align-items:center;max-width:380px;margin:18px auto 8px;color:var(--ink-3)}
+.crop-zoom input{flex:1;accent-color:var(--accent)}
+
+/* 發布 */
+.pubbar{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:8px;padding:8px 8px 8px 18px;border-radius:999px;background:var(--ink);color:var(--bg);box-shadow:var(--shadow-lg);animation:slide-up .35s cubic-bezier(.2,.8,.2,1);max-width:calc(100vw - 24px);font-size:14px}
+.pubbar[hidden]{display:none}
+.pubbar .dot{width:9px;height:9px;border-radius:50%;background:#f5a524;box-shadow:0 0 0 4px rgba(245,165,36,.25);flex:none;margin-right:4px;animation:pulse 1.8s infinite}
+.pubbar .dot.ok{background:#3fbf7a;box-shadow:0 0 0 4px rgba(63,191,122,.25)}
+.pubbar .txt{white-space:nowrap;margin-right:6px}
+.pubbar .btn.ghost{color:var(--bg)}
+.pubbar .btn.ghost:hover{background:rgba(127,127,127,.22)}
+.pubbar .btn{border-radius:999px}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.steps li{display:flex;align-items:center;gap:12px;color:var(--ink-3);font-weight:600}
+.steps .sdot{width:22px;height:22px;border-radius:50%;border:2px solid var(--line-2);flex:none;display:grid;place-items:center}
+.steps li.run{color:var(--ink)}
+.steps li.run .sdot{border-color:var(--accent);border-top-color:transparent;animation:spin .8s linear infinite}
+.steps li.done{color:var(--ink)}
+.steps li.done .sdot{border-color:var(--ok);background:var(--ok)}
+.steps li.done .sdot::after{content:"";width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:translate(0,-1px) rotate(45deg)}
+.steps li.fail .sdot{border-color:var(--danger);background:var(--danger)}
+.steps em{margin-left:auto;font-style:normal;font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.pbar{height:6px;border-radius:999px;background:var(--bg-2);overflow:hidden;margin:18px 0 6px}
+.pbar i{display:block;height:100%;width:0;background:var(--accent);border-radius:inherit;transition:width .3s}
+.result-box{margin-top:14px;padding:14px 16px;border-radius:14px;font-size:14px;line-height:1.7}
+.result-box.ok{background:color-mix(in srgb,var(--ok) 12%,transparent)}
+.result-box.bad{background:color-mix(in srgb,var(--danger) 12%,transparent)}
+.loglist{margin:0;padding-left:20px;line-height:1.9}
+
+/* 提示訊息 */
+.toasts{position:fixed;top:calc(var(--header-h) + 12px);right:16px;z-index:200;display:flex;flex-direction:column;gap:8px;pointer-events:none;max-width:calc(100vw - 32px)}
+.toast{pointer-events:auto;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-left:4px solid var(--ok);padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);font-size:14px;max-width:360px;animation:toast-in .3s cubic-bezier(.2,.8,.2,1)}
+.toast.warn{border-left-color:var(--warn)}
+.toast.err{border-left-color:var(--danger)}
+.toast.out{animation:toast-in .25s reverse forwards}
+.load-err{max-width:640px;margin:60px auto}
+
+footer{border-top:1px solid var(--line);margin-top:auto}
+.foot{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;padding:26px 28px 100px;color:var(--ink-3);font-size:13px}
+.foot a{color:var(--ink-2);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.foot a:hover{color:var(--ink)}
+.foot .sp{flex:1}
+
+@keyframes fade{from{opacity:0}}
+@keyframes pop-in{from{opacity:0;transform:translateY(10px) scale(.97)}}
+@keyframes slide-up{from{opacity:0;transform:translate(-50%,20px)}}
+@keyframes toast-in{from{opacity:0;transform:translateX(24px)}}
+@keyframes shimmer{to{background-position:-300% 0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(245,165,36,0)}}
+
+/* =========================================================
+   RWD
+   ========================================================= */
+@media (max-width:960px){
+  .nav{display:none}
+  .hero{grid-template-columns:1fr;gap:26px;padding:30px 28px}
+  .detail{grid-template-columns:1fr;gap:16px}
+  /* 手機：歌名 → 影片 → 樂譜 → 其他資訊 */
+  .side{display:contents}
+  .side>*{order:4}
+  .side>.song-title{order:1}
+  .side>.vpanel{order:2}
+  .detail>.sheet{order:3}
+  .sheet-scroll{height:78vh;min-height:420px}
+  .about{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  :root{--header-h:60px}
+  .wrap{padding:0 16px}
+  .foot{padding:22px 16px 110px}
+  .brand small{display:none}
+  .logo{width:36px;height:36px}
+  .hero{margin-top:16px;padding:24px 18px;border-radius:22px}
+  .lead{font-size:15px;margin-bottom:20px}
+  .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+  .stats div{min-width:0}
+  .stats b{font-size:24px}
+  .stats span{font-size:11.5px;white-space:nowrap}
+  .fb{height:150px}
+  .fb-nut{width:5px}
+  .fb-names span{left:4px;font-size:10px}
+  .search{max-width:none;flex-basis:100%}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px;width:calc(100% + 32px)}
+  .chips::-webkit-scrollbar{display:none}
+  .tb-right{margin-left:0;width:100%}
+  .tb-right .sel{flex:1;min-width:0}
+  #dice{flex-basis:100%}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .card{border-radius:16px}
+  .card-body{padding:11px 12px 13px}
+  .card h3{font-size:15px}
+  .artist{font-size:13px;margin-bottom:8px}
+  .card-foot .pg{display:none}
+  .on-cover{left:8px;top:8px}
+  .vflag{right:8px;bottom:8px}
+  .card.add{min-height:220px}
+  .list{grid-template-columns:1fr}
+  .row:nth-child(odd){border-right:0}
+  .row{padding:14px 4px}
+  .song-title h1{font-size:26px}
+  .sheet-head{padding:10px 12px 10px 16px}
+  .sheet-head small{display:none}
+  .sheet-scroll{padding:14px 10px}
+  .prevnext{gap:10px}
+  .pn{padding:12px 14px}
+  .modal-back{padding:0;align-items:end}
+  .modal{width:100%!important;max-height:94vh;border-radius:22px 22px 0 0}
+  .modal-body{padding:18px 16px}
+  .modal-head{padding:14px 12px 14px 18px}
+  .modal-foot{padding:12px 16px}
+  .field.s2,.field.s3{grid-column:span 3}
+  .vrow{grid-template-columns:1fr auto auto}
+  .vrow .v-label{grid-column:1/-1}
+  .pubbar{border-radius:18px;flex-wrap:wrap;justify-content:flex-end;bottom:12px;padding:10px}
+  .pubbar .txt{flex:1 1 100%;margin:0 0 4px 4px}
+  .toasts{left:16px;right:16px;max-width:none}
+  .toast{max-width:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#/" aria-label="回首頁">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M20 2.5c9.6 0 16.5 3.6 16.5 10.4 0 9.4-9.3 19.5-16.5 24.6C12.8 32.4 3.5 22.3 3.5 12.9 3.5 6.1 10.4 2.5 20 2.5Z" fill="var(--accent)"/>
+        <circle cx="20" cy="15.5" r="5.4" fill="none" stroke="#fff" stroke-width="2.2"/>
+        <path d="M12.5 24.5h15M14.5 28.5h11" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".75"/>
+      </svg>
+      <span><b id="brand-title">小齊的吉他寶庫</b><small id="brand-sub">每一首練過的歌，都值得被好好收藏</small></span>
+    </a>
+    <nav class="nav" aria-label="主選單">
+      <a href="#/" data-nav="全部">全部歌曲</a>
+      <a href="#/" data-nav="練習中">練習中</a>
+      <a href="#/" data-nav="已學會">已學會</a>
+      <a href="#/" data-nav="about">關於</a>
+    </nav>
+    <div class="top-actions" id="top-actions"></div>
+  </div>
+</header>
+
+<main id="app" aria-live="polite"></main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 小齊 Dustin・中央大學資工</span>
+    <span>樂譜與影片版權屬原作者，本站僅作個人練習紀錄。</span>
+    <span class="sp"></span>
+    <a href="https://github.com/ChangDustin/Dustin_Guitar_Treasure" target="_blank" rel="noopener">GitHub 原始碼 ↗</a>
+  </div>
+</footer>
+
+<div class="pubbar" id="pubbar" hidden></div>
+<div class="toasts" id="toasts" role="status"></div>
+
+<script>
+(() => {
+'use strict';
+
+/* =========================================================
+   常數與小工具
+   ========================================================= */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const LEVELS = ['初階', '中階', '中進階', '高階'];
+const STATUSES = ['想學', '練習中', '已學會'];
+const TUNINGS = ['標準調弦（Standard）', '降半音（E♭ Standard）', 'Drop D', 'DADGAD', 'Open D', 'Open G', 'Open C'];
+const PDFJS = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/';
+const PDFLIB = 'https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js';
+const MANAGED = /^assets\/(covers|tabs|videos)\//;
+
+const P = {
+  search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  x: '<path d="M18 6 6 18M6 6l12 12"/>',
+  edit: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+  trash: '<path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  minus: '<path d="M5 12h14"/>',
+  lock: '<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  moon: '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>',
+  dice: '<rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.3" fill="currentColor"/>',
+  chevL: '<path d="m15 18-6-6 6-6"/>',
+  chevR: '<path d="m9 18 6-6-6-6"/>',
+  chevD: '<path d="m6 9 6 6 6-6"/>',
+  play: '<path d="M7 4.5v15l12.5-7.5Z" fill="currentColor"/>',
+  stop: '<rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/>',
+  expand: '<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>',
+  upload: '<path d="M12 16V4M7 9l5-5 5 5M4 20h16"/>',
+  download: '<path d="M12 4v12M7 11l5 5 5-5M4 20h16"/>',
+  image: '<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',
+  film: '<rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/>',
+  file: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h5"/>',
+  gear: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/>',
+  cloud: '<path d="M16 16l-4-4-4 4M12 12v9"/><path d="M20.4 18.4A5 5 0 0 0 18 9h-1.3A8 8 0 1 0 3 16.3"/>',
+  logout: '<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>',
+  vol: '<path d="M11 5 6 9H2v6h4l5 4Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/>',
+  mute: '<path d="M11 5 6 9H2v6h4l5 4Z"/><path d="m22 9-6 6M16 9l6 6"/>',
+  grid: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+  list: '<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>',
+  metro: '<path d="M8 3h8l4 18H4Z"/><path d="M4.8 17h14.4M12 15l5-9"/>',
+  note: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
+  zoomIn: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/>',
+  zoomOut: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11h6"/>',
+  ext: '<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+  shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>',
+  code: '<path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>',
+  guitar: '<path d="m20 2 2 2-5 5"/><path d="m17 9-3.5 3.5"/><path d="M11.4 9.6a3.6 3.6 0 0 0-5.1.3 3 3 0 0 0-.6 3.2 3.4 3.4 0 0 0-3 2.3c-.6 2.2 1.3 4.6 3.7 5.2 2.2.6 4.1-.3 4.6-2a3 3 0 0 0-.3-2.6 3 3 0 0 0 3.2-.6 3.6 3.6 0 0 0 .3-5.1"/><circle cx="8.5" cy="15.5" r="1.2"/>',
+};
+const I = (name, cls = '') => `<svg class="i ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[name]}</svg>`;
+
+function webStore(kind) {
+  return {
+    get(k, d) { try { const v = window[kind].getItem(k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { window[kind].setItem(k, JSON.stringify(v)); } catch {} },
+    del(k) { try { window[kind].removeItem(k); } catch {} },
+  };
+}
+const store = webStore('localStorage');
+const sess = webStore('sessionStorage');
+
+const rand = (n = 6) => Math.random().toString(36).slice(2, 2 + n).padEnd(n, '0');
+const hue = str => { let h = 7; for (const c of String(str)) h = (h * 31 + c.codePointAt(0)) % 360; return h; };
+const fmtDate = iso => { const d = new Date(iso); return iso && !isNaN(d) ? `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}` : '—'; };
+const lvIdx = l => LEVELS.indexOf(l) + 1;
+const stIdx = s => STATUSES.indexOf(s);
+function slugify(t) {
+  const s = t.normalize('NFKD').toLowerCase().replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40);
+  return s.length >= 2 ? s : 'song-' + rand(5);
+}
+
+const loadedScripts = {};
+function loadScript(src) {
+  return loadedScripts[src] ||= new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = src; s.async = true;
+    s.onload = res;
+    s.onerror = () => { delete loadedScripts[src]; rej(new Error('無法載入外部函式庫，請檢查網路')); };
+    document.head.appendChild(s);
+  });
+}
+async function getPdfjs() {
+  if (!window.pdfjsLib) await loadScript(PDFJS + 'build/pdf.min.js');
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS + 'build/pdf.worker.min.js';
+  return window.pdfjsLib;
+}
+async function openPdf(src) {
+  const lib = await getPdfjs();
+  const opts = { cMapUrl: PDFJS + 'cmaps/', cMapPacked: true, standardFontDataUrl: PDFJS + 'standard_fonts/' };
+  if (typeof src === 'string') opts.url = src; else opts.data = src;
+  return lib.getDocument(opts).promise;
+}
+
+/* IndexedDB：草稿（包含上傳的檔案）存在管理者自己的瀏覽器 */
+const idb = (() => {
+  let dbp = null;
+  const open = () => dbp ||= new Promise((res, rej) => {
+    const r = indexedDB.open('guitar-treasure', 1);
+    r.onupgradeneeded = () => r.result.createObjectStore('kv');
+    r.onsuccess = () => res(r.result);
+    r.onerror = () => rej(r.error);
+  });
+  const run = async (mode, fn) => {
+    const db = await open();
+    return new Promise((res, rej) => {
+      const t = db.transaction('kv', mode);
+      const req = fn(t.objectStore('kv'));
+      t.oncomplete = () => res(req && req.result);
+      t.onerror = () => rej(t.error);
+      t.onabort = () => rej(t.error);
+    });
+  };
+  return {
+    get: k => run('readonly', s => s.get(k)).catch(() => undefined),
+    set: (k, v) => run('readwrite', s => s.put(v, k)),
+    del: k => run('readwrite', s => s.delete(k)).catch(() => {}),
+  };
+})();
+
+/* =========================================================
+   狀態
+   ========================================================= */
+const S = {
+  pub: null,          // 網站上公開的資料（data/songs.json）
+  draft: null,        // 管理者還沒發布的草稿 { data, files, log, baseRev, publishedRev? }
+  admin: false,
+  view: store.get('gt-view', 'grid'),
+  f: { q: '', level: '全部', status: '全部', sort: 'new' },
+  homeY: 0,
+  lastRoute: '',
+  pubbarHidden: false,
+};
+const cur = () => (S.admin && S.draft) ? S.draft.data : S.pub;
+
+function normalize(d) {
+  d = d && typeof d === 'object' ? d : {};
+  d.site = Object.assign({ title: '小齊的吉他寶庫', subtitle: '' }, d.site || {});
+  d.songs = Array.isArray(d.songs) ? d.songs.filter(s => s && s.id && s.title) : [];
+  d.songs.forEach(s => {
+    s.tags = Array.isArray(s.tags) ? s.tags : [];
+    s.videos = Array.isArray(s.videos) ? s.videos : [];
+    s.source = s.source || { name: '', url: '' };
+  });
+  d.rev = d.rev || '';
+  return d;
+}
+
+const blobUrls = new Map();
+function fileUrl(p) {
+  if (!p) return '';
+  if (/^(https?:|blob:|data:)/i.test(p)) return p;
+  const b = S.draft && S.draft.files[p];
+  if (b) {
+    if (!blobUrls.has(p)) blobUrls.set(p, URL.createObjectURL(b));
+    return blobUrls.get(p);
+  }
+  return p.split('/').map(encodeURIComponent).join('/');
+}
+function collectPaths(data) {
+  const set = new Set();
+  for (const s of (data && data.songs) || []) {
+    if (s.cover) set.add(s.cover);
+    if (s.pdf && s.pdf.path) set.add(s.pdf.path);
+    for (const v of s.videos || []) if (v.url && !/^https?:/i.test(v.url)) set.add(v.url);
+  }
+  return set;
+}
+function ensureDraft() {
+  if (!S.draft) S.draft = { data: structuredClone(S.pub), files: {}, log: [], baseRev: S.pub.rev };
+  if (S.draft.publishedRev) { S.draft.baseRev = S.draft.publishedRev; delete S.draft.publishedRev; }
+  S.pubbarHidden = false;
+  return S.draft;
+}
+function gcDraftFiles() {
+  const used = collectPaths(S.draft.data);
+  for (const p of Object.keys(S.draft.files)) {
+    if (!used.has(p)) {
+      delete S.draft.files[p];
+      if (blobUrls.has(p)) { URL.revokeObjectURL(blobUrls.get(p)); blobUrls.delete(p); }
+    }
+  }
+}
+async function saveDraft() {
+  try { await idb.set('draft', S.draft); }
+  catch { toast('這個瀏覽器無法暫存草稿，重新整理前請先發布。', 'warn', 5000); }
+  renderPubBar();
+}
+async function discardDraft() {
+  S.draft = null;
+  await idb.del('draft');
+  for (const u of blobUrls.values()) URL.revokeObjectURL(u);
+  blobUrls.clear();
+  render();
+}
+
+/* =========================================================
+   提示訊息與對話框
+   ========================================================= */
+function toast(html, type = 'ok', ms = 3400) {
+  const el = document.createElement('div');
+  el.className = 'toast ' + type;
+  el.innerHTML = html;
+  $('#toasts').appendChild(el);
+  setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 260); }, ms);
+}
+
+const modals = [];
+function modal({ title, body, foot = '', wide = false, dismissible = true, onClose }) {
+  const back = document.createElement('div');
+  back.className = 'modal-back';
+  back.innerHTML = `<div class="modal ${wide ? 'wide' : ''}" role="dialog" aria-modal="true" aria-label="${esc(title)}">
+    <div class="modal-head"><h2>${esc(title)}</h2><button class="icon-btn sm" data-close aria-label="關閉">${I('x')}</button></div>
+    <div class="modal-body">${body}</div>${foot ? `<div class="modal-foot">${foot}</div>` : ''}</div>`;
+  document.body.appendChild(back);
+  document.body.classList.add('no-scroll');
+  const m = {
+    el: back.firstElementChild, back, dismissible, closed: false,
+    close(v) {
+      if (m.closed) return;
+      m.closed = true;
+      modals.splice(modals.indexOf(m), 1);
+      back.classList.add('out');
+      setTimeout(() => back.remove(), 170);
+      if (!modals.length) document.body.classList.remove('no-scroll');
+      onClose && onClose(v);
+    },
+  };
+  let downOnBack = false;
+  back.addEventListener('pointerdown', e => { downOnBack = e.target === back; });
+  back.addEventListener('click', e => { if (e.target === back && downOnBack && m.dismissible) m.close(); });
+  $$('[data-close]', back).forEach(b => b.addEventListener('click', () => m.close()));
+  modals.push(m);
+  // 立刻把焦點移進對話框，避免 Enter 又按到背後的按鈕
+  const f = $('.modal-body input:not([type=file]):not([type=hidden]):not([readonly]):not([disabled]), .modal-body textarea', m.el);
+  if (f && matchMedia('(pointer:fine)').matches) f.focus({ preventScroll: true });
+  else { document.activeElement && document.activeElement.blur(); m.el.tabIndex = -1; m.el.focus({ preventScroll: true }); }
+  return m;
+}
+function confirmBox(html, { ok = '確定', danger = false } = {}) {
+  return new Promise(res => {
+    const m = modal({
+      title: '請確認', body: `<p class="confirm-text">${html}</p>`,
+      foot: `<button class="btn" data-close>取消</button><button class="btn ${danger ? 'danger solid' : 'primary'}" data-ok>${esc(ok)}</button>`,
+      onClose: v => res(v === true),
+    });
+    $('[data-ok]', m.el).addEventListener('click', () => m.close(true));
+  });
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const m = modals[modals.length - 1];
+    if (m) { if (m.dismissible) m.close(); return; }
+    closeMenu();
+  }
+  if (e.key === '/' && !modals.length && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
+    const q = $('#q');
+    if (q) { e.preventDefault(); q.focus(); }
+  }
+});
+
+/* =========================================================
+   聲音：撥弦合成（Karplus-Strong）與節拍器
+   ========================================================= */
+let actx = null;
+function audio() {
+  if (!actx) {
+    const C = window.AudioContext || window.webkitAudioContext;
+    if (!C) return null;
+    actx = new C();
+  }
+  if (actx.state === 'suspended') actx.resume();
+  return actx;
+}
+const ksCache = new Map();
+function ksBuffer(freq) {
+  const ctx = audio();
+  const key = Math.round(freq * 10);
+  if (ksCache.has(key)) return ksCache.get(key);
+  const sr = ctx.sampleRate, len = Math.floor(sr * 2.4), N = Math.max(2, Math.round(sr / freq));
+  const buf = ctx.createBuffer(1, len, sr), out = buf.getChannelData(0);
+  const ring = new Float32Array(N);
+  for (let i = 0; i < N; i++) ring[i] = Math.random() * 2 - 1;
+  for (let i = 1; i < N; i++) ring[i] = (ring[i] + ring[i - 1]) * 0.5;   // 讓起音不要太刺
+  const decay = freq < 140 ? 0.998 : freq < 220 ? 0.997 : 0.995;
+  let p = 0;
+  for (let i = 0; i < len; i++) {
+    const q = (p + 1) % N, v = ring[p];
+    out[i] = v;
+    ring[p] = decay * 0.5 * (v + ring[q]);
+    p = q;
+  }
+  const fade = Math.floor(sr * 0.25);
+  for (let i = 0; i < fade; i++) out[len - 1 - i] *= i / fade;
+  ksCache.set(key, buf);
+  return buf;
+}
+function pluck(freq, vol = 0.45) {
+  const ctx = audio();
+  if (!ctx) return;
+  const src = ctx.createBufferSource();
+  src.buffer = ksBuffer(freq);
+  const lp = ctx.createBiquadFilter();
+  lp.type = 'lowpass'; lp.frequency.value = 4200;
+  const g = ctx.createGain(); g.gain.value = vol;
+  src.connect(lp).connect(g).connect(ctx.destination);
+  src.start();
+}
+const NOTE_NAMES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+const midiFreq = m => 440 * Math.pow(2, (m - 69) / 12);
+const noteName = m => NOTE_NAMES[m % 12] + (Math.floor(m / 12) - 1);
+
+/* =========================================================
+   GitHub 發布設定
+   ========================================================= */
+function ghConfig() {
+  const saved = store.get('gt-gh', {});
+  const site = (S.pub && S.pub.site.github) || {};
+  let owner = saved.owner || site.owner || '', repo = saved.repo || site.repo || '';
+  const m = location.hostname.match(/^([\w-]+)\.github\.io$/i);
+  if (!owner && m) owner = m[1];
+  if (!repo && m) repo = location.pathname.split('/').filter(Boolean)[0] || '';
+  return { owner, repo, branch: saved.branch || site.branch || 'main', token: store.get('gt-gh-token', '') };
+}
+function ghApi(cfg) {
+  return async (path, { method = 'GET', body } = {}) => {
+    const r = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}${path ? '/' + path : ''}`, {
+      method,
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization: `Bearer ${cfg.token}`,
+        'X-GitHub-Api-Version': '2022-11-28',
+        ...(body ? { 'Content-Type': 'application/json' } : {}),
+      },
+      body: body ? JSON.stringify(body) : undefined,
+    });
+    if (!r.ok) {
+      let msg = '';
+      try { msg = (await r.json()).message || ''; } catch {}
+      const err = new Error(`${r.status} ${msg}`.trim());
+      err.status = r.status;
+      throw err;
+    }
+    return r.status === 204 ? null : r.json();
+  };
+}
+const ghHint = e => e.status === 401 ? 'token 無效或已過期，請重新建立。'
+  : e.status === 403 ? 'token 沒有寫入權限（需要 Contents: Read and write），或 API 次數用完了。'
+  : e.status === 404 ? '找不到 repo 或分支，請檢查 owner / repo / branch，以及 token 是否有授權這個 repo。'
+  : e.status === 409 || e.status === 422 ? 'GitHub 拒絕了這次更新，請重新整理頁面後再試一次。'
+  : '請確認網路連線後再試一次。';
+function toBase64(blob) {
+  return new Promise((res, rej) => {
+    const r = new FileReader();
+    r.onload = () => res(String(r.result).split(',')[1] || '');
+    r.onerror = () => rej(r.error);
+    r.readAsDataURL(blob);
+  });
+}
+
+/* 管理密碼：PBKDF2-SHA256 */
+const b64ToBytes = b => Uint8Array.from(atob(b), c => c.charCodeAt(0));
+const bytesToB64 = u => btoa(String.fromCharCode(...u));
+async function pbkdf2(pw, saltB64, iter) {
+  if (!window.crypto || !crypto.subtle) throw new Error('瀏覽器不支援（需要 https 網址）');
+  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveBits']);
+  const bits = await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt: b64ToBytes(saltB64), iterations: iter }, key, 256);
+  return bytesToB64(new Uint8Array(bits));
+}
+async function makeAdminHash(pw) {
+  const salt = bytesToB64(crypto.getRandomValues(new Uint8Array(16)));
+  const iter = 150000;
+  return { salt, hash: await pbkdf2(pw, salt, iter), iter };
+}
+
+/* =========================================================
+   路由與畫面
+   ========================================================= */
+const app = $('#app');
+let cleanups = [];
+function route() {
+  const h = decodeURIComponent(location.hash.slice(1) || '/');
+  const m = h.match(/^\/song\/(.+)$/);
+  return m ? { name: 'song', id: m[1] } : { name: 'home' };
+}
+function render() {
+  cleanups.forEach(f => { try { f(); } catch {} });
+  cleanups = [];
+  closeMenu();
+  const r = route();
+  if (S.lastRoute === 'home' && r.name !== 'home') S.homeY = window.scrollY;
+  renderTop();
+  if (!S.pub) return;
+  if (r.name === 'song') renderSong(r.id); else renderHome();
+  renderPubBar();
+  if (r.name === 'home' && S.lastRoute && S.lastRoute !== 'home') window.scrollTo(0, S.homeY);
+  else if (r.name === 'song') window.scrollTo(0, 0);
+  S.lastRoute = r.name;
+}
+window.addEventListener('hashchange', render);
+
+/* ---------- 頁首 ---------- */
+function renderTop() {
+  const d = cur();
+  if (d) {
+    $('#brand-title').textContent = d.site.title || '小齊的吉他寶庫';
+    $('#brand-sub').textContent = d.site.subtitle || '';
+  }
+  const dark = document.documentElement.dataset.theme
+    ? document.documentElement.dataset.theme === 'dark'
+    : matchMedia('(prefers-color-scheme: dark)').matches;
+  const box = $('#top-actions');
+  box.innerHTML = `
+    <button class="icon-btn" id="theme-btn" aria-label="切換深色／淺色" title="切換深色／淺色">${I(dark ? 'sun' : 'moon')}</button>
+    ${S.admin
+      ? `<button class="btn sm admin-pill" id="admin-btn" aria-haspopup="menu">${I('gear')} 管理模式 ${I('chevD')}</button>`
+      : `<button class="btn sm" id="login-btn">${I('lock')} 管理</button>`}`;
+  $('#theme-btn').onclick = () => {
+    const next = dark ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    store.set('gt-theme', next);
+    renderTop();
+  };
+  if (S.admin) $('#admin-btn').onclick = e => { e.stopPropagation(); toggleMenu(); };
+  else $('#login-btn').onclick = openLogin;
+  const r = route();
+  $$('.nav a').forEach(a => a.classList.toggle('on', r.name === 'home' && a.dataset.nav !== 'about' && a.dataset.nav === S.f.status));
+}
+$$('.nav a').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  const key = a.dataset.nav;
+  const go = () => {
+    if (key === 'about') { $('#about') && $('#about').scrollIntoView({ behavior: 'smooth' }); return; }
+    S.f.status = key;
+    syncToolbar(); renderSongs(); renderTop();
+    $('#toolbar') && $('#toolbar').scrollIntoView({ behavior: 'smooth' });
+  };
+  if (route().name !== 'home') { location.hash = '#/'; setTimeout(go, 60); } else go();
+}));
+
+let menuEl = null;
+function closeMenu() { if (menuEl) { menuEl.remove(); menuEl = null; } }
+function toggleMenu() {
+  if (menuEl) return closeMenu();
+  const n = S.draft && !S.draft.publishedRev ? S.draft.log.length : 0;
+  menuEl = document.createElement('div');
+  menuEl.className = 'menu';
+  menuEl.setAttribute('role', 'menu');
+  menuEl.innerHTML = `
+    <button data-a="add" role="menuitem">${I('plus')} 新增歌曲</button>
+    <button data-a="publish" role="menuitem">${I('cloud')} 發布到網站 ${n ? `<span class="badge">${n}</span>` : ''}</button>
+    <button data-a="settings" role="menuitem">${I('gear')} 網站設定</button>
+    <hr>
+    <button data-a="logout" role="menuitem">${I('logout')} 登出</button>`;
+  $('#top-actions').appendChild(menuEl);
+  menuEl.addEventListener('click', e => {
+    const a = e.target.closest('[data-a]');
+    if (!a) return;
+    closeMenu();
+    if (a.dataset.a === 'add') openEditor();
+    if (a.dataset.a === 'publish') { if (n) publish(); else toast('目前沒有需要發布的變更'); }
+    if (a.dataset.a === 'settings') openSettings();
+    if (a.dataset.a === 'logout') logout();
+  });
+}
+document.addEventListener('click', e => { if (menuEl && !menuEl.contains(e.target)) closeMenu(); });
+
+/* ---------- 首頁 ---------- */
+const STR_OPEN = [64, 59, 55, 50, 45, 40];   // e B G D A E（MIDI）
+const STR_NAME = ['e', 'B', 'G', 'D', 'A', 'E'];
+const FRETS = 12, NUT = 6.5;
+const fretPos = n => NUT + (1 - Math.pow(2, -n / 12)) / (1 - Math.pow(2, -FRETS / 12)) * (100 - NUT - 1.2);
+const strY = i => 12.5 + i * 15;
+
+function fretboardHTML() {
+  let h = `<div class="fb-wrap" id="fbw"><div class="fb" id="fb" role="group" aria-label="吉他指板：點弦試聽，滑過可以刷弦">
+    <div class="fb-head" style="width:${NUT}%"></div><div class="fb-nut" style="left:${NUT}%"></div>`;
+  for (let n = 1; n <= FRETS; n++) h += `<div class="fb-fret" style="left:${fretPos(n).toFixed(2)}%"></div>`;
+  for (const n of [3, 5, 7, 9, 12]) {
+    const x = ((fretPos(n - 1) + fretPos(n)) / 2).toFixed(2);
+    h += n === 12
+      ? `<div class="fb-dot" style="left:${x}%;top:35%"></div><div class="fb-dot" style="left:${x}%;top:65%"></div>`
+      : `<div class="fb-dot" style="left:${x}%;top:50%"></div>`;
+  }
+  STR_NAME.forEach((s, i) => { h += `<div class="fb-str ${i > 2 ? 'wound' : ''}" data-s="${i}" style="top:${strY(i)}%;--t:${(1 + i * 0.42).toFixed(2)}px"><i></i></div>`; });
+  h += `<div class="fb-names">${STR_NAME.map((s, i) => `<span style="top:${strY(i)}%">${s}</span>`).join('')}</div></div>`;
+  h += `<div class="fb-nums">${[0, 3, 5, 7, 9, 12].map(n => `<span style="left:${n ? ((fretPos(n - 1) + fretPos(n)) / 2).toFixed(2) : NUT / 2}%">${n || '空弦'}</span>`).join('')}</div>`;
+  h += `<div class="fb-bar"><span>${I('guitar')}</span><span id="fb-hint">點一下弦試聽音高，開啟聲音後滑過就能刷弦</span><button class="btn sm" id="snd">${I('mute')} 聲音關</button></div></div>`;
+  return h;
+}
+let soundOn = false;
+function mountFretboard() {
+  const fb = $('#fb'), wrap = $('#fbw'), btn = $('#snd');
+  if (!fb) return;
+  const upd = () => { btn.innerHTML = soundOn ? `${I('vol')} 聲音開` : `${I('mute')} 聲音關`; };
+  upd();
+  btn.onclick = () => { soundOn = !soundOn; if (soundOn) audio(); upd(); };
+  const fretAt = xp => { if (xp < NUT) return 0; for (let n = 1; n <= FRETS; n++) if (xp < fretPos(n)) return n; return FRETS; };
+  const near = yp => { let best = -1, dist = 7.5; STR_NAME.forEach((_, i) => { const d = Math.abs(strY(i) - yp); if (d < dist) { dist = d; best = i; } }); return best; };
+  const play = (i, xp, r, showPop) => {
+    const el = $(`.fb-str[data-s="${i}"]`, fb);
+    el.classList.remove('vib'); void el.offsetWidth; el.classList.add('vib');
+    if (!soundOn) return;
+    const fret = fretAt(xp), midi = STR_OPEN[i] + fret;
+    pluck(midiFreq(midi), 0.42);
+    if (showPop) {
+      const pop = document.createElement('span');
+      pop.className = 'fb-pop';
+      pop.textContent = noteName(midi);
+      const x = fret === 0 ? NUT / 2 : (fretPos(fret - 1) + fretPos(fret)) / 2;
+      pop.style.left = x / 100 * r.width + 'px';
+      pop.style.top = strY(i) / 100 * r.height + 'px';
+      wrap.appendChild(pop);
+      setTimeout(() => pop.remove(), 1000);
+    }
+  };
+  let lastY = null;
+  fb.addEventListener('pointerdown', e => {
+    if (!soundOn) { soundOn = true; upd(); }
+    audio();
+    const r = fb.getBoundingClientRect();
+    const i = near((e.clientY - r.top) / r.height * 100);
+    if (i >= 0) play(i, (e.clientX - r.left) / r.width * 100, r, true);
+    lastY = e.clientY;
+  });
+  fb.addEventListener('pointermove', e => {
+    const r = fb.getBoundingClientRect();
+    if (lastY == null) { lastY = e.clientY; return; }
+    const y0 = Math.min(lastY, e.clientY), y1 = Math.max(lastY, e.clientY);
+    const xp = (e.clientX - r.left) / r.width * 100;
+    STR_NAME.forEach((_, i) => {
+      const ys = r.top + strY(i) / 100 * r.height;
+      if (ys > y0 && ys <= y1) play(i, xp, r, e.pointerType !== 'mouse' || e.buttons > 0);
+    });
+    lastY = e.clientY;
+  });
+  fb.addEventListener('pointerleave', () => { lastY = null; });
+}
+
+function countUp(root) {
+  $$('[data-count]', root).forEach(el => {
+    const to = +el.dataset.count, t0 = performance.now(), dur = 900 + Math.min(to, 50) * 8;
+    const step = t => {
+      const k = Math.min(1, (t - t0) / dur);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+}
+
+function coverHTML(s) {
+  if (s.cover) return `<img src="${esc(fileUrl(s.cover))}" alt="${esc(s.title)} 封面" loading="lazy" decoding="async">`;
+  const ch = [...String(s.title || '♪').trim()][0] || '♪';
+  return `<div class="cover-gen" style="--h:${hue(s.title)}" role="img" aria-label="${esc(s.title)} 封面"><span>${esc(ch.toUpperCase())}</span></div>`;
+}
+const lvBadge = (l, extra = '') => l ? `<span class="lv lv-${lvIdx(l)} ${extra}">${esc(l)}</span>` : '';
+const stBadge = s => stIdx(s) >= 0 ? `<span class="st st-${stIdx(s)}">${esc(s)}</span>` : '';
+const pagesText = pdf => !pdf ? '無樂譜' : pdf.preview ? `${pdf.pages}/${pdf.totalPages} 頁` : `${pdf.pages} 頁`;
+const songHref = id => '#/song/' + encodeURIComponent(id);
+
+function sortSongs(list, mode) {
+  const by = {
+    new: (a, b) => String(b.createdAt || '').localeCompare(String(a.createdAt || '')),
+    title: (a, b) => a.title.localeCompare(b.title, 'zh-Hant'),
+    lv: (a, b) => lvIdx(a.level) - lvIdx(b.level) || a.title.localeCompare(b.title, 'zh-Hant'),
+    lvd: (a, b) => lvIdx(b.level) - lvIdx(a.level) || a.title.localeCompare(b.title, 'zh-Hant'),
+  };
+  return [...list].sort(by[mode] || by.new);
+}
+function filtered() {
+  const q = S.f.q.trim().toLowerCase();
+  const list = cur().songs.filter(s =>
+    (S.f.level === '全部' || s.level === S.f.level) &&
+    (S.f.status === '全部' || s.status === S.f.status) &&
+    (!q || [s.title, s.artist, s.arranger, s.tuning, s.tags.join(' ')].join(' ').toLowerCase().includes(q)));
+  return sortSongs(list, S.f.sort);
+}
+
+function renderHome() {
+  const d = cur();
+  document.title = d.site.title || '小齊的吉他寶庫';
+  const songs = d.songs;
+  const learned = songs.filter(s => s.status === '已學會').length;
+  const practicing = songs.filter(s => s.status === '練習中').length;
+  const pages = songs.reduce((n, s) => n + (s.pdf ? (s.pdf.totalPages || s.pdf.pages || 0) : 0), 0);
+  const title = d.site.title || '小齊的吉他寶庫';
+  const split = title.indexOf('的') >= 0 ? title.indexOf('的') + 1 : 0;
+  app.innerHTML = `<div class="wrap">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">DUSTIN'S GUITAR TREASURE</p>
+        <h1>${esc(title.slice(0, split))}<span>${esc(title.slice(split))}</span></h1>
+        <p class="lead">${esc(d.site.subtitle || '')}</p>
+        <div class="stats">
+          <div><b data-count="${songs.length}">0</b><span>收錄曲目</span></div>
+          <div><b data-count="${learned}">0</b><span>已學會</span></div>
+          <div><b data-count="${practicing}">0</b><span>練習中</span></div>
+          <div><b data-count="${pages}">0</b><span>樂譜頁數</span></div>
+        </div>
+      </div>
+      ${fretboardHTML()}
+    </section>
+
+    <section class="toolbar" id="toolbar">
+      <label class="search">${I('search')}<input id="q" type="search" placeholder="搜尋曲名、演出者、標籤…" aria-label="搜尋歌曲" value="${esc(S.f.q)}" enterkeyhint="search"><kbd>/</kbd></label>
+      <div class="chips" id="lv-chips" role="group" aria-label="難度">${['全部', ...LEVELS].map(l => `<button class="chip" data-lv="${l}">${l === '全部' ? '全部難度' : l}</button>`).join('')}</div>
+      <div class="tb-right">
+        <select class="sel" id="st-sel" aria-label="練習狀態"><option value="全部">所有狀態</option>${STATUSES.map(s => `<option>${s}</option>`).join('')}</select>
+        <select class="sel" id="sort-sel" aria-label="排序">
+          <option value="new">最新加入</option><option value="title">曲名</option><option value="lv">難度 低→高</option><option value="lvd">難度 高→低</option>
+        </select>
+        <div class="seg" role="group" aria-label="顯示方式">
+          <button data-view="grid" title="方塊" aria-label="方塊檢視">${I('grid')}</button>
+          <button data-view="list" title="列表" aria-label="列表檢視">${I('list')}</button>
+        </div>
+        <button class="btn" id="dice">${I('dice')} 今天彈哪首？</button>
+      </div>
+    </section>
+
+    <div class="result-head"><h2>歌曲寶庫</h2><span class="count" id="count"></span>
+      ${S.admin ? `<button class="btn sm accent" data-add>${I('plus')} 新增歌曲</button>` : ''}</div>
+    <div id="songs"></div>
+
+    <section class="about" id="about">
+      <h2>關於這個寶庫</h2>
+      <div class="panel"><div class="ico">${I('guitar')}</div><h3>這是什麼？</h3>
+        <p>小齊的吉他練習紀錄。每首歌一個方塊，點進去就能一邊看 TAB 譜、一邊看演奏影片，旁邊還有節拍器和練習筆記。</p></div>
+      <div class="panel"><div class="ico">${I('shield')}</div><h3>版權說明</h3>
+        <p>付費樂譜只公開部分頁面當作預覽，完整樂譜請到原作者或平台購買支持。影片版權屬原上傳者，這裡只是嵌入播放。</p></div>
+      <div class="panel"><div class="ico">${I('code')}</div><h3>怎麼做的？</h3>
+        <p>單一 index.html 放在 GitHub Pages。PDF.js 顯示樂譜、Web Audio 做吉他指板和節拍器；管理者登入後用 GitHub API 把更新直接 commit 回 repo。</p></div>
+    </section>
+  </div>`;
+
+  mountFretboard();
+  countUp(app);
+  syncToolbar();
+  renderSongs();
+  // 趁空檔先把 PDF.js 載好，點進歌曲頁時樂譜會更快出現
+  (window.requestIdleCallback || (fn => setTimeout(fn, 1200)))(() => getPdfjs().catch(() => {}));
+
+  const q = $('#q');
+  q.addEventListener('input', () => { S.f.q = q.value; renderSongs(false); });
+  $('#lv-chips').addEventListener('click', e => {
+    const b = e.target.closest('[data-lv]');
+    if (!b) return;
+    S.f.level = b.dataset.lv; syncToolbar(); renderSongs();
+  });
+  $('#st-sel').onchange = e => { S.f.status = e.target.value; renderSongs(); renderTop(); };
+  $('#sort-sel').onchange = e => { S.f.sort = e.target.value; renderSongs(); };
+  $$('.seg [data-view]').forEach(b => b.onclick = () => { S.view = b.dataset.view; store.set('gt-view', S.view); syncToolbar(); renderSongs(); });
+  $('#dice').onclick = randomPick;
+  const addBtn = $('[data-add]', app);
+  if (addBtn) addBtn.onclick = () => openEditor();
+
+  const box = $('#songs');
+  box.addEventListener('click', e => {
+    const ed = e.target.closest('[data-edit]'), del = e.target.closest('[data-del]');
+    if (ed) { e.preventDefault(); openEditor(ed.dataset.edit); }
+    else if (del) { e.preventDefault(); deleteSong(del.dataset.del); }
+    else if (e.target.closest('[data-add]')) openEditor();
+    else if (e.target.closest('[data-clear]')) { S.f = { ...S.f, q: '', level: '全部', status: '全部' }; $('#q').value = ''; syncToolbar(); renderSongs(); renderTop(); }
+  });
+  if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    box.addEventListener('pointermove', e => {
+      const c = e.target.closest('.card:not(.add)');
+      if (!c) return;
+      const r = c.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      c.classList.add('tilting');
+      c.style.setProperty('--ry', ((px - 0.5) * 9).toFixed(2) + 'deg');
+      c.style.setProperty('--rx', ((0.5 - py) * 7).toFixed(2) + 'deg');
+      c.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+      c.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+    });
+    box.addEventListener('pointerout', e => {
+      const c = e.target.closest('.card');
+      if (c && !c.contains(e.relatedTarget)) { c.classList.remove('tilting'); c.style.removeProperty('--rx'); c.style.removeProperty('--ry'); }
+    });
+  }
+}
+
+function syncToolbar() {
+  $$('#lv-chips .chip').forEach(c => c.classList.toggle('on', c.dataset.lv === S.f.level));
+  const st = $('#st-sel'); if (st) st.value = S.f.status;
+  const so = $('#sort-sel'); if (so) so.value = S.f.sort;
+  $$('.seg [data-view]').forEach(b => b.classList.toggle('on', b.dataset.view === S.view));
+}
+
+const adminBtns = (id, cls) => `<div class="${cls}"><button data-edit="${esc(id)}" aria-label="編輯">${I('edit')} 編輯</button><button class="del" data-del="${esc(id)}" aria-label="刪除">${I('trash')} 刪除</button></div>`;
+
+function renderSongs(animate = true) {
+  const box = $('#songs');
+  if (!box) return;
+  const all = cur().songs, list = filtered();
+  $('#count').textContent = list.length === all.length ? `共 ${all.length} 首` : `找到 ${list.length} 首／共 ${all.length} 首`;
+  const empty = `<div class="empty">${I('note')}<b>${all.length ? '找不到符合的歌曲' : '寶庫還是空的'}</b>${all.length ? '換個關鍵字，或' : ''}${all.length ? '<button class="btn sm" data-clear style="margin-left:6px">清除篩選</button>' : (S.admin ? '點「新增歌曲」放上第一首吧！' : '')}</div>`;
+  const noAnim = animate ? '' : ';animation:none';
+  if (S.view === 'list') {
+    box.innerHTML = `<div class="list">${list.map((s, i) => `
+      <article class="row" style="--i:${Math.min(i, 16)}${noAnim}">
+        <div class="row-thumb">${coverHTML(s)}</div>
+        <div class="row-main"><h3><a class="stretched" href="${songHref(s.id)}">${esc(s.title)}</a></h3><p class="artist">${esc(s.artist || '—')}</p></div>
+        ${stBadge(s.status)} ${lvBadge(s.level)}
+        ${S.admin ? adminBtns(s.id, 'row-admin') : `<span class="chev">${I('chevR')}</span>`}
+      </article>`).join('') || empty}</div>`;
+  } else {
+    box.innerHTML = `<div class="grid">${S.admin && !S.f.q && S.f.level === '全部' && S.f.status === '全部'
+      ? `<button class="card add" data-add style="--i:0${noAnim}"><span class="plus">${I('plus')}</span>新增歌曲</button>` : ''}${list.map((s, i) => `
+      <article class="card" style="--i:${Math.min(i + 1, 14)}${noAnim}">
+        <div class="card-cover">${coverHTML(s)}${lvBadge(s.level, 'on-cover')}${s.videos.length ? `<span class="vflag">${I('play')} 影片</span>` : ''}</div>
+        <div class="card-body">
+          <h3><a class="stretched" href="${songHref(s.id)}">${esc(s.title)}</a></h3>
+          <p class="artist">${esc(s.artist || '—')}</p>
+          <div class="card-foot">${stBadge(s.status) || '<span></span>'}<span class="pg">${I('file')}${pagesText(s.pdf)}</span></div>
+        </div>
+        ${S.admin ? adminBtns(s.id, 'card-admin') : ''}
+      </article>`).join('') || empty}</div>`;
+  }
+}
+
+let picking = false;
+async function randomPick() {
+  const list = filtered();
+  if (!list.length) return toast('目前的篩選條件下沒有歌曲可以抽', 'warn');
+  if (picking) return;
+  picking = true;
+  if (S.view !== 'grid') { S.view = 'grid'; store.set('gt-view', 'grid'); syncToolbar(); renderSongs(false); }
+  const cards = $$('#songs .card:not(.add)');
+  const target = Math.floor(Math.random() * list.length);
+  const total = Math.max(12, cards.length * 2) + target;
+  $('#songs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  for (let k = 0; k <= total; k++) {
+    cards.forEach(c => c.classList.remove('pick'));
+    cards[k % cards.length].classList.add('pick');
+    if (soundOn) pluck(midiFreq(64 + [0, 3, 5, 7, 10, 12][k % 6]), 0.18);
+    await new Promise(r => setTimeout(r, 50 + Math.pow(k / total, 3) * 260));
+  }
+  const pickCard = cards[total % cards.length];
+  pickCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  toast(`🎸 今天就彈《${esc(list[total % cards.length].title)}》吧！`);
+  await new Promise(r => setTimeout(r, 900));
+  picking = false;
+  if (route().name === 'home') location.hash = songHref(list[total % cards.length].id);
+}
+
+/* ---------- 歌曲頁 ---------- */
+function parseYouTube(u) {
+  try {
+    const url = new URL(u);
+    const h = url.hostname.replace(/^(www|m|music)\./, '');
+    let id = '';
+    if (h === 'youtu.be') id = url.pathname.slice(1).split('/')[0];
+    else if (/(^|\.)youtube(-nocookie)?\.com$/.test(h)) {
+      if (url.pathname === '/watch') id = url.searchParams.get('v') || '';
+      else { const m = url.pathname.match(/^\/(embed|shorts|live|v)\/([\w-]{11})/); if (m) id = m[2]; }
+    }
+    if (!/^[\w-]{11}$/.test(id)) return null;
+    const t = url.searchParams.get('t') || url.searchParams.get('start') || '';
+    const m = t.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s?)?$/);
+    const start = m ? (+m[1] || 0) * 3600 + (+m[2] || 0) * 60 + (+m[3] || 0) : 0;
+    return { id, start };
+  } catch { return null; }
+}
+function videoHTML(v) {
+  if (!v || !v.url) return `<div class="video-empty">${I('film')}<span>這首歌還沒有影片</span></div>`;
+  const yt = parseYouTube(v.url);
+  if (yt) return `<iframe src="https://www.youtube-nocookie.com/embed/${yt.id}?rel=0&playsinline=1${yt.start ? '&start=' + yt.start : ''}" title="${esc(v.label || 'YouTube 影片')}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+  return `<video src="${esc(fileUrl(v.url))}" controls preload="metadata" playsinline></video>`;
+}
+
+function renderSong(id) {
+  const d = cur();
+  const s = d.songs.find(x => x.id === id);
+  if (!s) {
+    document.title = '找不到這首歌 · ' + d.site.title;
+    app.innerHTML = `<div class="wrap notfound">${I('note')}<h2>找不到這首歌</h2><p class="hint">可能已經被刪除，或網址打錯了。</p><p><a class="btn" href="#/">${I('chevL')} 回寶庫</a></p></div>`;
+    return;
+  }
+  document.title = `${s.title} · ${d.site.title}`;
+  const order = sortSongs(d.songs, 'new');
+  const idx = order.findIndex(x => x.id === s.id);
+  const prev = order[idx - 1], next = order[idx + 1];
+  const vids = s.videos;
+  const src = s.source || {};
+  const pdfFact = !s.pdf ? '尚未上傳' : s.pdf.preview ? `公開 ${s.pdf.pages} 頁／全 ${s.pdf.totalPages} 頁` : `${s.pdf.pages} 頁`;
+
+  app.innerHTML = `<div class="wrap">
+    <a class="back" href="#/">${I('chevL')} 回寶庫</a>
+    <div class="detail">
+      <aside class="side">
+        <div class="song-title">
+          <h1>${esc(s.title)}</h1>
+          <p class="by">${esc(s.artist || '')}${s.arranger ? `${s.artist ? '・' : ''}編曲／採譜 ${esc(s.arranger)}` : ''}</p>
+          <div class="badges">${lvBadge(s.level)}${stBadge(s.status)}${s.tags.map(t => `<span class="tag">#${esc(t)}</span>`).join('')}</div>
+        </div>
+
+        <div class="panel vpanel">
+          <div class="panel-title">${I('film')} 吉他影片</div>
+          <div class="video-box" id="vbox">${videoHTML(vids[0])}</div>
+          ${vids.length > 1
+            ? `<div class="vtabs" role="tablist">${vids.map((v, i) => `<button class="chip ${i ? '' : 'on'}" data-v="${i}" role="tab">${esc(v.label || '影片 ' + (i + 1))}</button>`).join('')}</div>`
+            : vids[0] && vids[0].label ? `<p class="vcap">${esc(vids[0].label)}</p>` : ''}
+        </div>
+
+        <div class="panel"><dl class="facts">
+          <div><dt>調弦</dt><dd>${esc(s.tuning || '標準調弦')}</dd></div>
+          <div><dt>Capo</dt><dd>${s.capo ? `第 ${esc(s.capo)} 格` : '不用'}</dd></div>
+          <div><dt>速度</dt><dd>${s.bpm ? `♩ = ${esc(s.bpm)}` : '—'}</dd></div>
+          <div><dt>樂譜</dt><dd>${pdfFact}</dd></div>
+          <div><dt>加入日期</dt><dd>${fmtDate(s.createdAt)}</dd></div>
+          <div><dt>最後更新</dt><dd>${fmtDate(s.updatedAt)}</dd></div>
+        </dl></div>
+
+        <div class="panel">
+          <div class="panel-title">${I('metro')} 節拍器</div>
+          <div class="metro">
+            <button class="icon-btn sm" data-m="-5" aria-label="慢 5">−5</button>
+            <button class="icon-btn sm" data-m="-1" aria-label="慢 1">${I('minus')}</button>
+            <div class="bpm"><b id="bpm">${s.bpm || 80}</b><small>BPM</small></div>
+            <button class="icon-btn sm" data-m="1" aria-label="快 1">${I('plus')}</button>
+            <button class="icon-btn sm" data-m="5" aria-label="快 5">+5</button>
+            <button class="btn accent play" id="mplay" aria-label="播放節拍器">${I('play')}</button>
+          </div>
+          <div class="beats" id="beats"><i></i><i></i><i></i><i></i></div>
+        </div>
+
+        ${s.notes ? `<div class="panel"><div class="panel-title">${I('edit')} 練習筆記</div><p class="notes">${esc(s.notes)}</p></div>` : ''}
+        ${src.name || src.url ? (src.url
+          ? `<a class="source" href="${esc(src.url)}" target="_blank" rel="noopener">${I('ext')} 樂譜來源：${esc(src.name || src.url)}</a>`
+          : `<span class="source">${I('file')} 樂譜來源：${esc(src.name)}</span>`) : ''}
+        ${S.admin ? `<button class="btn" data-edit="${esc(s.id)}">${I('edit')} 編輯這首歌</button>` : ''}
+      </aside>
+
+      <section class="sheet" id="sheet" aria-label="樂譜預覽">
+        <div class="sheet-head">
+          <h2>樂譜預覽</h2><small>滑動預覽</small>
+          <div class="sheet-tools">
+            <span class="pgi" id="pgi"></span>
+            <button class="icon-btn sm" id="zo" aria-label="縮小">${I('minus')}</button>
+            <button class="zlabel" id="zl" title="符合寬度">100%</button>
+            <button class="icon-btn sm" id="zi" aria-label="放大">${I('plus')}</button>
+            <button class="icon-btn sm" id="fs" aria-label="全螢幕">${I('expand')}</button>
+          </div>
+        </div>
+        <div class="sheet-scroll" id="scroller"><div class="pages" id="pages"></div></div>
+        ${s.pdf && s.pdf.preview ? `<div class="sheet-note">${I('lock')}<span>付費樂譜只公開 ${s.pdf.pages} 頁預覽（全 ${s.pdf.totalPages} 頁）。${src.name ? `完整樂譜請到「${esc(src.name)}」購買，支持原作者。` : '完整樂譜請向原作者購買。'}</span></div>` : ''}
+      </section>
+    </div>
+    <nav class="prevnext" aria-label="上一首與下一首">
+      ${prev ? `<a class="pn" href="${songHref(prev.id)}"><small>‹ 上一首</small><b>${esc(prev.title)}</b></a>` : '<span></span>'}
+      ${next ? `<a class="pn next" href="${songHref(next.id)}"><small>下一首 ›</small><b>${esc(next.title)}</b></a>` : '<span></span>'}
+    </nav>
+  </div>`;
+
+  $$('.vtabs .chip').forEach(b => b.onclick = () => {
+    $$('.vtabs .chip').forEach(x => x.classList.toggle('on', x === b));
+    $('#vbox').innerHTML = videoHTML(vids[+b.dataset.v]);
+  });
+  const eb = $('[data-edit]', app);
+  if (eb) eb.onclick = () => openEditor(s.id);
+  mountMetronome(s.bpm || 80);
+  mountSheet(s);
+
+  const onKey = e => {
+    if (modals.length || /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
+    if (e.key === 'ArrowLeft' && prev) location.hash = songHref(prev.id);
+    if (e.key === 'ArrowRight' && next) location.hash = songHref(next.id);
+  };
+  document.addEventListener('keydown', onKey);
+  cleanups.push(() => document.removeEventListener('keydown', onKey));
+}
+
+function mountMetronome(bpm0) {
+  let bpm = Math.min(240, Math.max(30, +bpm0 || 80)), timer = null, nextT = 0, beat = 0;
+  const lights = $$('#beats i'), out = $('#bpm'), btn = $('#mplay');
+  const timeouts = [];
+  const click = (t, acc) => {
+    const ctx = audio();
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.frequency.value = acc ? 1560 : 1040;
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(acc ? 0.55 : 0.32, t + 0.002);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.06);
+    o.connect(g).connect(ctx.destination);
+    o.start(t); o.stop(t + 0.08);
+  };
+  const tick = () => {
+    const ctx = audio();
+    while (nextT < ctx.currentTime + 0.12) {
+      const b = beat % 4;
+      click(nextT, b === 0);
+      timeouts.push(setTimeout(() => lights.forEach((l, i) => l.classList.toggle('on', i === b)), Math.max(0, (nextT - ctx.currentTime) * 1000)));
+      if (timeouts.length > 32) timeouts.splice(0, 16);
+      nextT += 60 / bpm;
+      beat++;
+    }
+  };
+  const stop = () => {
+    clearInterval(timer); timer = null;
+    timeouts.forEach(clearTimeout); timeouts.length = 0;
+    lights.forEach(l => l.classList.remove('on'));
+    btn.innerHTML = I('play'); btn.setAttribute('aria-label', '播放節拍器');
+  };
+  btn.onclick = () => {
+    if (timer) return stop();
+    const ctx = audio();
+    if (!ctx) return toast('這個瀏覽器不支援 Web Audio', 'err');
+    nextT = ctx.currentTime + 0.06; beat = 0;
+    timer = setInterval(tick, 25); tick();
+    btn.innerHTML = I('stop'); btn.setAttribute('aria-label', '停止節拍器');
+  };
+  $$('[data-m]', app).forEach(b => b.onclick = () => {
+    bpm = Math.min(240, Math.max(30, bpm + +b.dataset.m));
+    out.textContent = bpm;
+  });
+  cleanups.push(stop);
+}
+
+async function mountSheet(s) {
+  const pagesEl = $('#pages'), scroller = $('#scroller'), sheet = $('#sheet');
+  const msg = html => { pagesEl.style.width = ''; pagesEl.innerHTML = `<div class="sheet-msg">${html}</div>`; };
+  if (!s.pdf || !s.pdf.path) {
+    msg(`${I('file')}<b>還沒有上傳樂譜</b>${S.admin ? `<button class="btn sm" id="up-pdf">${I('upload')} 上傳 PDF</button>` : ''}`);
+    const b = $('#up-pdf'); if (b) b.onclick = () => openEditor(s.id);
+    $('.sheet-tools', sheet).style.visibility = 'hidden';
+    return;
+  }
+  msg(`<span>樂譜載入中…</span>`);
+  let alive = true, doc = null;
+  const pages = [];
+  let zoom = 1, rt = 0;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+  const io = new IntersectionObserver(ents => {
+    for (const en of ents) {
+      const p = pages[+en.target.dataset.i];
+      p.visible = en.isIntersecting;
+      if (en.isIntersecting) draw(p);
+    }
+  }, { root: scroller, rootMargin: '900px 0px' });
+  const ro = new ResizeObserver(() => layout());
+  cleanups.push(() => {
+    alive = false; io.disconnect(); ro.disconnect();
+    pages.forEach(p => p.task && p.task.cancel());
+    if (doc) doc.destroy();
+    if (document.fullscreenElement === sheet) document.exitFullscreen().catch(() => {});
+  });
+
+  async function draw(p) {
+    const w = Math.round(p.el.clientWidth * dpr);
+    if (!w || Math.abs(w - p.drawnW) < 2) return;
+    if (p.task) { p.task.cancel(); p.task = null; }
+    let scale = w / p.vp.width;
+    const maxPx = 14e6;
+    if (p.vp.width * p.vp.height * scale * scale > maxPx) scale = Math.sqrt(maxPx / (p.vp.width * p.vp.height));
+    const viewport = p.page.getViewport({ scale });
+    const c = document.createElement('canvas');
+    c.width = Math.floor(viewport.width); c.height = Math.floor(viewport.height);
+    const task = p.page.render({ canvasContext: c.getContext('2d'), viewport });
+    p.task = task;
+    try { await task.promise; } catch { return; }
+    if (p.task === task) p.task = null;
+    if (!alive) return;
+    p.canvas.replaceWith(c); p.canvas = c; p.drawnW = w;
+    p.el.classList.remove('loading');
+  }
+  function layout() {
+    if (!pages.length) return;
+    const base = Math.min(scroller.clientWidth - (innerWidth <= 640 ? 20 : 40), 880);
+    pagesEl.style.width = Math.round(base * zoom) + 'px';
+    $('#zl').textContent = Math.round(zoom * 100) + '%';
+    clearTimeout(rt);
+    rt = setTimeout(() => pages.filter(p => p.visible).forEach(draw), 140);
+  }
+  function setZoom(z) {
+    const ratio = (scroller.scrollTop + scroller.clientHeight / 2) / Math.max(1, scroller.scrollHeight);
+    zoom = Math.min(3, Math.max(0.5, Math.round(z * 100) / 100));
+    layout();
+    scroller.scrollTop = ratio * scroller.scrollHeight - scroller.clientHeight / 2;
+  }
+  const updPage = () => {
+    const mid = scroller.scrollTop + scroller.clientHeight * 0.35;
+    let n = 1;
+    for (const p of pages) if (p.el.offsetTop <= mid) n = +p.el.dataset.i + 1;
+    $('#pgi').textContent = `${n} / ${pages.length} 頁`;
+  };
+
+  try {
+    doc = await openPdf(fileUrl(s.pdf.path));
+    if (!alive) { doc.destroy(); return; }
+    pagesEl.innerHTML = '';
+    for (let i = 1; i <= doc.numPages; i++) {
+      const page = await doc.getPage(i);
+      if (!alive) return;
+      const vp = page.getViewport({ scale: 1 });
+      const el = document.createElement('div');
+      el.className = 'page loading';
+      el.dataset.i = i - 1;
+      el.style.aspectRatio = `${vp.width} / ${vp.height}`;
+      el.innerHTML = `<canvas></canvas><span class="pno">${i}</span>`;
+      pagesEl.appendChild(el);
+      pages.push({ page, vp, el, canvas: el.firstChild, drawnW: 0, task: null, visible: false });
+      if (i === 1) layout();
+      io.observe(el);
+    }
+    layout(); updPage();
+    ro.observe(scroller);
+  } catch (e) {
+    if (alive) msg(`${I('file')}<b>樂譜載入失敗</b><span class="hint">${esc(e.message || e)}</span>`);
+    return;
+  }
+
+  scroller.addEventListener('scroll', updPage, { passive: true });
+  scroller.addEventListener('wheel', e => { if (e.ctrlKey) { e.preventDefault(); setZoom(zoom * (e.deltaY < 0 ? 1.1 : 1 / 1.1)); } }, { passive: false });
+  $('#zi').onclick = () => setZoom(zoom + 0.25);
+  $('#zo').onclick = () => setZoom(zoom - 0.25);
+  $('#zl').onclick = () => setZoom(1);
+  $('#fs').onclick = async () => {
+    if (document.fullscreenElement) return document.exitFullscreen();
+    if (sheet.classList.contains('pseudo-full')) { sheet.classList.remove('pseudo-full'); document.body.classList.remove('no-scroll'); return layout(); }
+    if (sheet.requestFullscreen) { try { await sheet.requestFullscreen(); return; } catch {} }
+    sheet.classList.add('pseudo-full'); document.body.classList.add('no-scroll'); layout();
+  };
+}
+
+/* =========================================================
+   管理者：登入
+   ========================================================= */
+let failCount = 0, lockUntil = 0;
+function openLogin() {
+  const m = modal({
+    title: '管理者登入',
+    body: `<form id="lg" class="form">
+      <div class="field"><label for="lg-pw">管理密碼</label><input type="password" id="lg-pw" autocomplete="current-password" required></div>
+      <p class="hint" style="grid-column:span 6">只有小齊本人可以新增、修改或刪除內容。</p>
+      <p class="err" id="lg-err" hidden style="grid-column:span 6"></p></form>`,
+    foot: `<button class="btn" data-close>取消</button><button class="btn primary" id="lg-ok">${I('lock')} 登入</button>`,
+  });
+  const err = $('#lg-err', m.el), ok = $('#lg-ok', m.el), pw = $('#lg-pw', m.el);
+  const submit = async e => {
+    e && e.preventDefault();
+    if (Date.now() < lockUntil) { err.hidden = false; err.textContent = `錯太多次了，請 ${Math.ceil((lockUntil - Date.now()) / 1000)} 秒後再試。`; return; }
+    if (!pw.value) return pw.focus();
+    ok.disabled = true; ok.textContent = '驗證中…';
+    try {
+      const cands = [S.pub.site.admin, S.draft && S.draft.data.site.admin].filter(a => a && a.salt && a.hash);
+      if (!cands.length) throw new Error('網站還沒有設定管理密碼');
+      let pass = false;
+      for (const a of cands) if (await pbkdf2(pw.value, a.salt, a.iter || 150000) === a.hash) { pass = true; break; }
+      if (!pass) {
+        failCount++;
+        if (failCount >= 5) { lockUntil = Date.now() + 30000; failCount = 0; }
+        err.hidden = false; err.textContent = '密碼不正確。';
+        m.el.classList.remove('shake'); void m.el.offsetWidth; m.el.classList.add('shake');
+        pw.select();
+        return;
+      }
+      failCount = 0;
+      S.admin = true; sess.set('gt-admin', true);
+      m.close(); render();
+      toast('歡迎回來，小齊！已進入管理模式 🎸');
+    } catch (e2) {
+      err.hidden = false; err.textContent = '無法驗證：' + e2.message;
+    } finally {
+      ok.disabled = false; ok.innerHTML = `${I('lock')} 登入`;
+    }
+  };
+  $('#lg', m.el).addEventListener('submit', submit);
+  ok.onclick = submit;
+}
+function logout() {
+  S.admin = false; sess.del('gt-admin');
+  render();
+  toast(S.draft && !S.draft.publishedRev ? '已登出。未發布的草稿還留在這台裝置，下次登入可以繼續。' : '已登出管理模式');
+}
+
+/* =========================================================
+   管理者：新增／編輯歌曲
+   ========================================================= */
+function parseRange(str, total) {
+  str = String(str || '').trim();
+  if (!str || /^(全部|all)$/i.test(str)) return null;
+  const out = new Set();
+  for (const part of str.split(/[,，、\s]+/)) {
+    if (!part) continue;
+    const m = part.match(/^(\d+)(?:\s*[-~～–]\s*(\d+))?$/);
+    if (!m) throw new Error(`公開頁面看不懂「${part}」，請用 1-2 或 1,3 這種格式`);
+    let a = +m[1], b = m[2] ? +m[2] : a;
+    if (a > b) [a, b] = [b, a];
+    if (a < 1 || b > total) throw new Error(`公開頁面要在 1～${total} 頁之間`);
+    for (let i = a; i <= b; i++) out.add(i - 1);
+  }
+  if (!out.size || out.size === total) return null;
+  return [...out].sort((x, y) => x - y);
+}
+async function extractPages(blob, idxs) {
+  await loadScript(PDFLIB);
+  const { PDFDocument } = window.PDFLib;
+  try {
+    const src = await PDFDocument.load(await blob.arrayBuffer(), { ignoreEncryption: true });
+    const out = await PDFDocument.create();
+    (await out.copyPages(src, idxs)).forEach(p => out.addPage(p));
+    return new Blob([await out.save()], { type: 'application/pdf' });
+  } catch (e) {
+    console.warn('copyPages 失敗，改用轉成圖片的方式', e);
+    const doc = await openPdf(await blob.arrayBuffer());
+    const out = await PDFDocument.create();
+    for (const i of idxs) {
+      const page = await doc.getPage(i + 1);
+      const vp1 = page.getViewport({ scale: 1 }), vp = page.getViewport({ scale: 2 });
+      const c = document.createElement('canvas');
+      c.width = vp.width; c.height = vp.height;
+      const ctx = c.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+      await page.render({ canvasContext: ctx, viewport: vp }).promise;
+      const jpg = await new Promise(r => c.toBlob(r, 'image/jpeg', 0.9));
+      const im = await out.embedJpg(await jpg.arrayBuffer());
+      out.addPage([vp1.width, vp1.height]).drawImage(im, { x: 0, y: 0, width: vp1.width, height: vp1.height });
+    }
+    doc.destroy();
+    return new Blob([await out.save()], { type: 'application/pdf' });
+  }
+}
+async function renderPdfPage(src, pageNo, width) {
+  const doc = await openPdf(src);
+  try {
+    const page = await doc.getPage(pageNo);
+    const vp1 = page.getViewport({ scale: 1 });
+    const vp = page.getViewport({ scale: width / vp1.width });
+    const c = document.createElement('canvas');
+    c.width = Math.floor(vp.width); c.height = Math.floor(vp.height);
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+    await page.render({ canvasContext: ctx, viewport: vp }).promise;
+    return { canvas: c, total: doc.numPages };
+  } finally { doc.destroy(); }
+}
+
+function openEditor(id) {
+  if (!S.admin) return;
+  const d = cur();
+  const orig = id ? d.songs.find(s => s.id === id) : null;
+  if (id && !orig) return toast('找不到這首歌', 'err');
+  const w = orig ? structuredClone(orig) : {
+    title: '', artist: '', arranger: '', level: '中階', status: '練習中', tuning: '標準調弦（Standard）',
+    capo: 0, bpm: '', tags: [], cover: '', pdf: null, videos: [], source: { name: '', url: '' }, notes: '',
+  };
+  const pend = { cover: undefined, pdf: undefined, videos: w.videos.map(v => ({ label: v.label || '', url: v.url || '' })) };
+  if (!orig) pend.videos.push({ label: '', url: '' });
+
+  const m = modal({
+    title: orig ? `編輯《${orig.title}》` : '新增歌曲', wide: true, dismissible: false,
+    body: `<form class="form" id="ed" autocomplete="off" novalidate>
+      <div class="field"><label for="f-title">曲名 *</label><input id="f-title" name="title" maxlength="80" required placeholder="例：River Flows in You"></div>
+      <div class="field s3"><label for="f-artist">演出者／原唱</label><input id="f-artist" name="artist" maxlength="80"></div>
+      <div class="field s3"><label for="f-arranger">編曲／採譜</label><input id="f-arranger" name="arranger" maxlength="80"></div>
+      <div class="field s2"><label for="f-level">難度</label><select id="f-level" name="level">${LEVELS.map(l => `<option>${l}</option>`).join('')}</select></div>
+      <div class="field s2"><label for="f-status">練習狀態</label><select id="f-status" name="status">${STATUSES.map(l => `<option>${l}</option>`).join('')}</select></div>
+      <div class="field s2"><label for="f-tags">標籤（用逗號分隔）</label><input id="f-tags" name="tags" placeholder="指彈, 動漫"></div>
+      <div class="field s2"><label for="f-tuning">調弦</label><input id="f-tuning" name="tuning" list="tunings"><datalist id="tunings">${TUNINGS.map(t => `<option value="${t}">`).join('')}</datalist></div>
+      <div class="field s2"><label for="f-capo">Capo（格）</label><input id="f-capo" name="capo" type="number" min="0" max="12" inputmode="numeric"></div>
+      <div class="field s2"><label for="f-bpm">速度 BPM</label><input id="f-bpm" name="bpm" type="number" min="20" max="300" inputmode="numeric"></div>
+
+      <div class="sec-title">封面</div>
+      <div class="field"><div class="cover-edit">
+        <div class="thumb" id="ed-cover"></div>
+        <div style="display:flex;flex-direction:column;gap:10px;flex:1;min-width:220px">
+          <div class="btn-row">
+            <label class="btn sm">${I('image')} 上傳照片<input type="file" accept="image/*" hidden id="ed-cover-file"></label>
+            <button type="button" class="btn sm" id="ed-cover-yt">${I('film')} 從影片縮圖</button>
+            <button type="button" class="btn sm" id="ed-cover-pdf">${I('file')} 從樂譜第一頁</button>
+            <button type="button" class="btn sm ghost danger" id="ed-cover-rm">移除</button>
+          </div>
+          <p class="hint">選好圖片後可以拖曳、縮放，裁成正方形當作方塊封面（輸出 720×720）。沒有封面會自動用曲名產生色塊。</p>
+        </div>
+      </div></div>
+
+      <div class="sec-title">樂譜 PDF</div>
+      <div class="field"><div class="file-box">
+        <div class="pdf-thumb" id="ed-pdf-thumb">${I('file')}</div>
+        <div class="file-info">
+          <div class="name" id="ed-pdf-info">還沒有樂譜</div>
+          <div class="btn-row">
+            <label class="btn sm">${I('upload')} 選擇 PDF<input type="file" accept="application/pdf,.pdf" hidden id="ed-pdf-file"></label>
+            <button type="button" class="btn sm ghost danger" id="ed-pdf-rm">移除</button>
+          </div>
+          <div class="range-row"><label for="ed-range">公開頁面</label><input class="inp" id="ed-range" placeholder="全部，或 1-2"><span class="hint" id="ed-range-hint">付費譜建議只公開 1～2 頁</span></div>
+        </div>
+      </div></div>
+
+      <div class="sec-title">吉他影片</div>
+      <div class="field"><div class="vlist" id="ed-videos"></div>
+        <div class="btn-row"><button type="button" class="btn sm" id="ed-v-add">${I('plus')} 再加一支影片</button></div>
+        <p class="hint">貼上 YouTube 連結（會自動變成播放器），或按 ${I('upload')} 上傳自己錄的影片檔（建議 40MB 以下）。</p></div>
+
+      <div class="sec-title">其他</div>
+      <div class="field s3"><label for="f-sname">樂譜來源名稱</label><input id="f-sname" name="sourceName" placeholder="例：探吉日、Musicnotes"></div>
+      <div class="field s3"><label for="f-surl">樂譜來源網址</label><input id="f-surl" name="sourceUrl" type="url" placeholder="https://"></div>
+      <div class="field"><label for="f-notes">練習筆記</label><textarea id="f-notes" name="notes" rows="4" placeholder="哪一段卡住、怎麼練、下次要注意什麼…"></textarea></div>
+    </form>`,
+    foot: `${orig ? `<button class="btn danger" id="ed-del">${I('trash')} 刪除</button><span class="grow"></span>` : ''}<button class="btn" data-close>取消</button><button class="btn primary" id="ed-save">${I('edit')} 儲存</button>`,
+  });
+  const el = m.el, f = $('#ed', el).elements;
+  f.title.value = w.title; f.artist.value = w.artist || ''; f.arranger.value = w.arranger || '';
+  f.level.value = LEVELS.includes(w.level) ? w.level : '中階';
+  f.status.value = STATUSES.includes(w.status) ? w.status : '練習中';
+  f.tags.value = (w.tags || []).join(', '); f.tuning.value = w.tuning || '';
+  f.capo.value = w.capo || 0; f.bpm.value = w.bpm || '';
+  f.sourceName.value = (w.source && w.source.name) || ''; f.sourceUrl.value = (w.source && w.source.url) || '';
+  f.notes.value = w.notes || '';
+
+  /* 封面 */
+  let coverPreviewUrl = '';
+  const drawCover = () => {
+    const box = $('#ed-cover', el);
+    if (coverPreviewUrl) { URL.revokeObjectURL(coverPreviewUrl); coverPreviewUrl = ''; }
+    if (pend.cover instanceof Blob) { coverPreviewUrl = URL.createObjectURL(pend.cover); box.innerHTML = `<img src="${coverPreviewUrl}" alt="封面預覽">`; }
+    else box.innerHTML = coverHTML({ title: f.title.value || '♪', cover: pend.cover === null ? '' : w.cover });
+  };
+  drawCover();
+  f.title.addEventListener('input', () => { if (!(pend.cover instanceof Blob) && (pend.cover === null || !w.cover)) drawCover(); });
+  const useCrop = async (src, cors) => { const b = await openCropper(src, cors); if (b) { pend.cover = b; drawCover(); } };
+  $('#ed-cover-file', el).onchange = async e => {
+    const file = e.target.files[0]; e.target.value = '';
+    if (!file) return;
+    if (!file.type.startsWith('image/')) return toast('請選擇圖片檔', 'err');
+    const url = URL.createObjectURL(file);
+    await useCrop(url, false);
+    URL.revokeObjectURL(url);
+  };
+  $('#ed-cover-yt', el).onclick = () => {
+    syncVideos();
+    const yt = pend.videos.map(v => !v.file && parseYouTube(v.url)).find(Boolean);
+    if (!yt) return toast('請先在「吉他影片」貼上一個 YouTube 連結', 'warn');
+    const probe = new Image();
+    probe.crossOrigin = 'anonymous';
+    probe.onload = () => useCrop(probe.naturalWidth > 200 ? probe.src : `https://i.ytimg.com/vi/${yt.id}/hqdefault.jpg`, true);
+    probe.onerror = () => useCrop(`https://i.ytimg.com/vi/${yt.id}/hqdefault.jpg`, true);
+    probe.src = `https://i.ytimg.com/vi/${yt.id}/maxresdefault.jpg`;
+  };
+  $('#ed-cover-pdf', el).onclick = async () => {
+    const src = pend.pdf ? await pend.pdf.blob.arrayBuffer() : (pend.pdf !== null && w.pdf ? fileUrl(w.pdf.path) : null);
+    if (!src) return toast('請先選擇樂譜 PDF', 'warn');
+    try {
+      const { canvas } = await renderPdfPage(src, 1, 1400);
+      const blob = await new Promise(r => canvas.toBlob(r, 'image/jpeg', 0.92));
+      const url = URL.createObjectURL(blob);
+      await useCrop(url, false);
+      URL.revokeObjectURL(url);
+    } catch (e) { toast('無法讀取樂譜：' + esc(e.message), 'err'); }
+  };
+  $('#ed-cover-rm', el).onclick = () => { pend.cover = null; drawCover(); };
+
+  /* 樂譜 */
+  const rangeInp = $('#ed-range', el), rangeHint = $('#ed-range-hint', el);
+  const drawPdf = async () => {
+    const info = $('#ed-pdf-info', el), th = $('#ed-pdf-thumb', el);
+    rangeInp.disabled = false;
+    rangeHint.textContent = '付費譜建議只公開 1～2 頁';
+    if (pend.pdf === null || (!pend.pdf && !w.pdf)) {
+      info.textContent = pend.pdf === null ? '已移除（儲存後生效）' : '還沒有樂譜';
+      th.innerHTML = I('file'); rangeInp.disabled = true; rangeInp.value = '';
+      return;
+    }
+    let src;
+    if (pend.pdf) {
+      info.textContent = `${pend.pdf.name}・共 ${pend.pdf.total} 頁`;
+      src = await pend.pdf.blob.arrayBuffer();
+    } else {
+      info.textContent = w.pdf.preview ? `目前公開 ${w.pdf.pages} 頁（原本全 ${w.pdf.totalPages} 頁）` : `目前公開全部 ${w.pdf.pages} 頁`;
+      if (w.pdf.preview) { rangeInp.disabled = true; rangeInp.value = ''; rangeHint.textContent = '已是預覽版；要改公開頁數請重新選擇完整 PDF'; }
+      src = fileUrl(w.pdf.path);
+    }
+    try {
+      const { canvas } = await renderPdfPage(src, 1, 160);
+      th.replaceChildren(canvas);
+    } catch { th.innerHTML = I('file'); }
+  };
+  drawPdf();
+  $('#ed-pdf-file', el).onchange = async e => {
+    const file = e.target.files[0]; e.target.value = '';
+    if (!file) return;
+    if (!/pdf$/i.test(file.type) && !/\.pdf$/i.test(file.name)) return toast('請選擇 PDF 檔', 'err');
+    if (file.size > 40 * 1024 * 1024) return toast('PDF 太大了（上限 40MB）', 'err');
+    try {
+      const doc = await openPdf(await file.arrayBuffer());
+      const total = doc.numPages; doc.destroy();
+      pend.pdf = { blob: file, name: file.name, total };
+      if (!rangeInp.value && total > 3) rangeInp.value = '1-2';
+      drawPdf();
+    } catch (err) { toast('讀不到這個 PDF：' + esc(err.message), 'err'); }
+  };
+  $('#ed-pdf-rm', el).onclick = () => { pend.pdf = null; drawPdf(); };
+
+  /* 影片 */
+  const vbox = $('#ed-videos', el);
+  const drawVideos = () => {
+    vbox.innerHTML = pend.videos.map((v, i) => `<div class="vrow" data-i="${i}">
+      <input class="inp v-label" placeholder="標籤，例：我的練習 10/19" value="${esc(v.label)}">
+      <input class="inp v-url" placeholder="https://www.youtube.com/watch?v=…" value="${esc(v.file ? '📎 ' + v.file.name : v.url)}" ${v.file ? 'readonly' : ''}>
+      <label class="icon-btn sm" title="上傳影片檔">${I('upload')}<input type="file" accept="video/*" hidden class="v-file"></label>
+      <button type="button" class="icon-btn sm v-rm" title="移除這支影片" aria-label="移除這支影片">${I('x')}</button></div>`).join('')
+      || '<p class="hint">還沒有影片，按下面的按鈕新增。</p>';
+  };
+  const syncVideos = () => {
+    $$('.vrow', vbox).forEach(r => {
+      const v = pend.videos[+r.dataset.i];
+      v.label = $('.v-label', r).value;
+      if (!v.file) v.url = $('.v-url', r).value.trim();
+    });
+  };
+  drawVideos();
+  vbox.addEventListener('change', e => {
+    if (!e.target.classList.contains('v-file')) return;
+    const file = e.target.files[0];
+    if (!file) return;
+    if (file.size > 95 * 1024 * 1024) return toast('影片超過 GitHub 單檔 100MB 上限，請改用 YouTube 連結', 'err');
+    if (file.size > 40 * 1024 * 1024) toast('影片有點大，發布會比較久；建議上傳到 YouTube 再貼連結', 'warn', 5000);
+    syncVideos();
+    const v = pend.videos[+e.target.closest('.vrow').dataset.i];
+    v.file = file; v.url = '';
+    if (!v.label) v.label = '我的練習影片';
+    drawVideos();
+  });
+  vbox.addEventListener('click', e => {
+    const rm = e.target.closest('.v-rm');
+    if (!rm) return;
+    syncVideos();
+    pend.videos.splice(+rm.closest('.vrow').dataset.i, 1);
+    drawVideos();
+  });
+  $('#ed-v-add', el).onclick = () => { syncVideos(); pend.videos.push({ label: '', url: '' }); drawVideos(); $$('.v-url', vbox).pop().focus(); };
+
+  /* 刪除與儲存 */
+  if (orig) $('#ed-del', el).onclick = async () => { if (await deleteSong(orig.id)) m.close(); };
+  const saveBtn = $('#ed-save', el);
+  saveBtn.onclick = async () => {
+    const title = f.title.value.trim();
+    if (!title) { f.title.focus(); f.title.closest('.field').classList.add('shake'); setTimeout(() => f.title.closest('.field').classList.remove('shake'), 400); return toast('請輸入曲名', 'err'); }
+    syncVideos();
+    for (const v of pend.videos) {
+      if (!v.file && v.url && !parseYouTube(v.url) && !/^https?:\/\//i.test(v.url) && !MANAGED.test(v.url)) return toast(`影片網址看不懂：${esc(v.url)}`, 'err');
+    }
+    const surl = f.sourceUrl.value.trim();
+    if (surl && !/^https?:\/\//i.test(surl)) return toast('樂譜來源網址要用 http:// 或 https:// 開頭', 'err');
+    let idxs = null;
+    try {
+      if (pend.pdf) idxs = parseRange(rangeInp.value, pend.pdf.total);
+      else if (pend.pdf !== null && w.pdf && !w.pdf.preview && rangeInp.value.trim()) idxs = parseRange(rangeInp.value, w.pdf.pages);
+    } catch (e) { rangeInp.focus(); return toast(esc(e.message), 'err'); }
+
+    saveBtn.disabled = true; saveBtn.textContent = '處理中…';
+    try {
+      const dr = ensureDraft(), data = dr.data;
+      let sid = orig ? orig.id : slugify(title);
+      if (!orig) { const base = sid; let n = 2; while (data.songs.some(x => x.id === sid)) sid = `${base}-${n++}`; }
+      const now = new Date().toISOString();
+      const s = {
+        ...w, id: sid, title,
+        artist: f.artist.value.trim(), arranger: f.arranger.value.trim(),
+        level: f.level.value, status: f.status.value, tuning: f.tuning.value.trim(),
+        capo: Math.max(0, Math.min(12, parseInt(f.capo.value, 10) || 0)),
+        bpm: Math.max(0, Math.min(300, parseInt(f.bpm.value, 10) || 0)) || null,
+        tags: [...new Set(f.tags.value.split(/[,，、]/).map(t => t.trim().replace(/^#/, '')).filter(Boolean))],
+        source: { name: f.sourceName.value.trim(), url: surl },
+        notes: f.notes.value.trim(),
+        createdAt: (orig && orig.createdAt) || now, updatedAt: now,
+      };
+      if (pend.cover === null) s.cover = '';
+      else if (pend.cover instanceof Blob) { const p = `assets/covers/${sid}-${rand()}.jpg`; dr.files[p] = pend.cover; s.cover = p; }
+
+      if (pend.pdf === null) s.pdf = null;
+      else if (pend.pdf) {
+        const blob = idxs ? await extractPages(pend.pdf.blob, idxs) : pend.pdf.blob;
+        const p = `assets/tabs/${sid}-${rand()}.pdf`;
+        dr.files[p] = blob;
+        s.pdf = { path: p, pages: idxs ? idxs.length : pend.pdf.total, totalPages: pend.pdf.total, preview: !!idxs };
+      } else if (idxs && w.pdf) {
+        const full = await (await fetch(fileUrl(w.pdf.path))).blob();
+        const p = `assets/tabs/${sid}-${rand()}.pdf`;
+        dr.files[p] = await extractPages(full, idxs);
+        s.pdf = { path: p, pages: idxs.length, totalPages: w.pdf.totalPages || w.pdf.pages, preview: true };
+      }
+
+      s.videos = [];
+      for (const v of pend.videos) {
+        if (v.file) {
+          const ext = ((v.file.name.split('.').pop() || 'mp4').toLowerCase().replace(/[^a-z0-9]/g, '')) || 'mp4';
+          const p = `assets/videos/${sid}-${rand()}.${ext}`;
+          dr.files[p] = v.file;
+          s.videos.push({ label: v.label.trim(), url: p });
+        } else if (v.url) s.videos.push({ label: v.label.trim(), url: v.url });
+      }
+
+      if (orig) data.songs[data.songs.findIndex(x => x.id === sid)] = s;
+      else data.songs.push(s);
+      dr.log.push(`${orig ? '修改' : '新增'}《${title}》`);
+      gcDraftFiles();
+      await saveDraft();
+      m.close(true);
+      if (!orig) location.hash = songHref(sid); else render();
+      toast(`已儲存《${esc(title)}》。這是草稿，按下方「發布到網站」大家才看得到。`, 'ok', 4600);
+    } catch (e) {
+      toast('儲存失敗：' + esc(e.message || e), 'err', 6000);
+    } finally {
+      saveBtn.disabled = false; saveBtn.innerHTML = `${I('edit')} 儲存`;
+    }
+  };
+}
+
+async function deleteSong(id) {
+  const s = cur().songs.find(x => x.id === id);
+  if (!s) return false;
+  const ok = await confirmBox(`確定要刪除《${esc(s.title)}》嗎？<br><span class="hint">發布之後網站上就看不到了（GitHub 的歷史紀錄裡還找得回來）。</span>`, { ok: '刪除', danger: true });
+  if (!ok) return false;
+  const dr = ensureDraft();
+  dr.data.songs = dr.data.songs.filter(x => x.id !== id);
+  dr.log.push(`刪除《${s.title}》`);
+  gcDraftFiles();
+  await saveDraft();
+  if (route().name === 'song') location.hash = '#/'; else render();
+  toast(`已刪除《${esc(s.title)}》（草稿）`);
+  return true;
+}
+
+/* 封面裁切器 */
+function openCropper(src, cors) {
+  return new Promise(resolve => {
+    const m = modal({
+      title: '裁切封面',
+      body: `<div class="crop-stage" id="cs"><img alt="" id="ci"><div class="crop-grid"></div></div>
+        <div class="crop-zoom">${I('zoomOut')}<input type="range" id="cz" min="0" max="1000" value="0" aria-label="縮放">${I('zoomIn')}</div>
+        <p class="hint center">拖曳移動・滑桿或滾輪縮放・手機可以雙指縮放</p>`,
+      foot: `<button class="btn" data-close>取消</button><button class="btn primary" id="crop-ok">${I('image')} 套用封面</button>`,
+      onClose: v => resolve(v instanceof Blob ? v : null),
+    });
+    const stage = $('#cs', m.el), img = $('#ci', m.el), zr = $('#cz', m.el);
+    let S0 = 0, iw = 0, ih = 0, sc = 1, min = 1, x = 0, y = 0;
+    const clamp = () => { x = Math.min(0, Math.max(S0 - iw * sc, x)); y = Math.min(0, Math.max(S0 - ih * sc, y)); };
+    const apply = () => {
+      clamp();
+      img.style.transform = `translate(${x}px, ${y}px) scale(${sc})`;
+      zr.value = Math.round(Math.log(sc / min) / Math.log(4) * 1000);
+    };
+    const zoomAt = (ns, cx, cy) => {
+      ns = Math.min(min * 4, Math.max(min, ns));
+      x = cx - (cx - x) * ns / sc; y = cy - (cy - y) * ns / sc; sc = ns;
+      apply();
+    };
+    if (cors) img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      iw = img.naturalWidth; ih = img.naturalHeight; S0 = stage.clientWidth;
+      img.style.width = iw + 'px'; img.style.height = ih + 'px';
+      min = Math.max(S0 / iw, S0 / ih); sc = min;
+      x = (S0 - iw * sc) / 2; y = (S0 - ih * sc) / 2;
+      apply();
+    };
+    img.onerror = () => { toast('圖片載入失敗', 'err'); m.close(); };
+    img.src = src;
+    zr.oninput = () => zoomAt(min * Math.pow(4, zr.value / 1000), S0 / 2, S0 / 2);
+    stage.addEventListener('wheel', e => {
+      e.preventDefault();
+      const r = stage.getBoundingClientRect();
+      zoomAt(sc * (e.deltaY < 0 ? 1.08 : 1 / 1.08), e.clientX - r.left, e.clientY - r.top);
+    }, { passive: false });
+    const pts = new Map();
+    let pinch = null;
+    stage.addEventListener('pointerdown', e => {
+      stage.setPointerCapture(e.pointerId);
+      pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      pinch = null; stage.classList.add('drag');
+    });
+    stage.addEventListener('pointermove', e => {
+      if (!pts.has(e.pointerId)) return;
+      const prev = pts.get(e.pointerId);
+      pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pts.size === 1) { x += e.clientX - prev.x; y += e.clientY - prev.y; apply(); }
+      else if (pts.size === 2) {
+        const [a, b] = [...pts.values()], dist = Math.hypot(a.x - b.x, a.y - b.y), r = stage.getBoundingClientRect();
+        if (pinch) zoomAt(sc * dist / pinch, (a.x + b.x) / 2 - r.left, (a.y + b.y) / 2 - r.top);
+        pinch = dist;
+      }
+    });
+    const up = e => { pts.delete(e.pointerId); pinch = null; if (!pts.size) stage.classList.remove('drag'); };
+    stage.addEventListener('pointerup', up);
+    stage.addEventListener('pointercancel', up);
+    $('#crop-ok', m.el).onclick = () => {
+      if (!iw) return;
+      const OUT = 720, c = document.createElement('canvas');
+      c.width = c.height = OUT;
+      const ctx = c.getContext('2d');
+      ctx.imageSmoothingQuality = 'high';
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, OUT, OUT);
+      ctx.drawImage(img, -x / sc, -y / sc, S0 / sc, S0 / sc, 0, 0, OUT, OUT);
+      try {
+        c.toBlob(b => b ? m.close(b) : toast('裁切失敗，請再試一次', 'err'), 'image/jpeg', 0.86);
+      } catch {
+        toast('這張圖片因為跨網域限制不能裁切，請改用「上傳照片」', 'err', 5000);
+      }
+    };
+  });
+}
+
+/* =========================================================
+   管理者：網站設定
+   ========================================================= */
+function openSettings(focus) {
+  const d = cur(), cfg = ghConfig();
+  const m = modal({
+    title: '網站設定', wide: true,
+    body: `
+      <section class="set-sec">
+        <h3>網站資訊</h3>
+        <div class="form">
+          <div class="field s3"><label for="st-title">網站標題</label><input id="st-title" maxlength="40"></div>
+          <div class="field s3"><label for="st-sub">標語</label><input id="st-sub" maxlength="60"></div>
+        </div>
+        <div class="btn-row"><button class="btn sm" id="st-site">儲存（草稿）</button></div>
+      </section>
+      <section class="set-sec">
+        <h3>修改管理密碼</h3>
+        <p class="hint">新密碼發布後才會在其他裝置生效。密碼只會以 PBKDF2 雜湊存在 songs.json，不會存明文。</p>
+        <div class="form">
+          <div class="field s3"><label for="st-pw1">新密碼（至少 8 個字）</label><input id="st-pw1" type="password" autocomplete="new-password"></div>
+          <div class="field s3"><label for="st-pw2">再輸入一次</label><input id="st-pw2" type="password" autocomplete="new-password"></div>
+        </div>
+        <div class="btn-row"><button class="btn sm" id="st-pw">更新密碼（草稿）</button></div>
+      </section>
+      <section class="set-sec" id="set-gh">
+        <h3>GitHub 發布設定</h3>
+        <p class="hint">發布需要一組 <b>fine-grained personal access token</b>：Repository access 只選這個 repo，權限 <b>Contents → Read and write</b>。token 只會存在這台裝置的瀏覽器，不會被上傳。
+          <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">到 GitHub 建立 token ↗</a></p>
+        <div class="form">
+          <div class="field s2"><label for="gh-owner">Owner（帳號）</label><input id="gh-owner"></div>
+          <div class="field s2"><label for="gh-repo">Repo</label><input id="gh-repo"></div>
+          <div class="field s2"><label for="gh-branch">分支</label><input id="gh-branch"></div>
+          <div class="field"><label for="gh-token">Token</label><input id="gh-token" type="password" autocomplete="off" placeholder="github_pat_…" spellcheck="false"></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn sm primary" id="gh-save">儲存設定</button>
+          <button class="btn sm" id="gh-test">測試連線</button>
+          <button class="btn sm ghost danger" id="gh-clear">從這台裝置移除 token</button>
+        </div>
+        <p class="hint" id="gh-msg" style="margin-top:10px"></p>
+      </section>
+      <section class="set-sec">
+        <h3>備份與草稿</h3>
+        <p class="hint">匯出目前看到的歌曲資料（JSON）。草稿裡還沒發布的檔案不會包含在 JSON 裡。</p>
+        <div class="btn-row">
+          <button class="btn sm" id="bk-export">${I('download')} 匯出 JSON</button>
+          <label class="btn sm">${I('upload')} 匯入 JSON<input type="file" accept="application/json,.json" hidden id="bk-import"></label>
+          <button class="btn sm danger" id="bk-discard" ${S.draft ? '' : 'disabled'}>${I('trash')} 捨棄所有未發布變更</button>
+        </div>
+      </section>`,
+    foot: `<button class="btn" data-close>完成</button>`,
+  });
+  const el = m.el;
+  $('#st-title', el).value = d.site.title || '';
+  $('#st-sub', el).value = d.site.subtitle || '';
+  $('#gh-owner', el).value = cfg.owner; $('#gh-repo', el).value = cfg.repo; $('#gh-branch', el).value = cfg.branch;
+  $('#gh-token', el).value = cfg.token;
+  if (focus === 'github') setTimeout(() => { $('#set-gh', el).scrollIntoView({ behavior: 'smooth' }); $('#gh-token', el).focus(); }, 120);
+
+  $('#st-site', el).onclick = async () => {
+    const t = $('#st-title', el).value.trim();
+    if (!t) return toast('網站標題不能空白', 'err');
+    const dr = ensureDraft();
+    dr.data.site.title = t; dr.data.site.subtitle = $('#st-sub', el).value.trim();
+    dr.log.push('修改網站資訊');
+    await saveDraft(); render(); toast('網站資訊已存成草稿');
+  };
+  $('#st-pw', el).onclick = async () => {
+    const a = $('#st-pw1', el).value, b = $('#st-pw2', el).value;
+    if (a.length < 8) return toast('密碼至少要 8 個字', 'err');
+    if (a !== b) return toast('兩次輸入的密碼不一樣', 'err');
+    const dr = ensureDraft();
+    dr.data.site.admin = await makeAdminHash(a);
+    dr.log.push('修改管理密碼');
+    await saveDraft();
+    $('#st-pw1', el).value = $('#st-pw2', el).value = '';
+    toast('新密碼已存成草稿，發布後生效');
+  };
+  const readCfg = () => ({ owner: $('#gh-owner', el).value.trim(), repo: $('#gh-repo', el).value.trim(), branch: $('#gh-branch', el).value.trim() || 'main', token: $('#gh-token', el).value.trim() });
+  const ghMsg = $('#gh-msg', el);
+  $('#gh-save', el).onclick = () => {
+    const c = readCfg();
+    store.set('gt-gh', { owner: c.owner, repo: c.repo, branch: c.branch });
+    if (c.token) store.set('gt-gh-token', c.token); else store.del('gt-gh-token');
+    ghMsg.textContent = '已儲存在這台裝置。';
+    toast('GitHub 設定已儲存');
+  };
+  $('#gh-test', el).onclick = async () => {
+    const c = readCfg();
+    if (!c.owner || !c.repo || !c.token) { ghMsg.textContent = '請先填好 owner、repo 和 token。'; return; }
+    ghMsg.textContent = '連線中…';
+    try {
+      const api = ghApi(c);
+      const info = await api('');
+      await api(`git/ref/heads/${encodeURIComponent(c.branch)}`);
+      const canPush = info.permissions ? info.permissions.push : true;
+      ghMsg.innerHTML = canPush
+        ? `✅ 連線成功：<b>${esc(info.full_name)}</b>（${esc(c.branch)} 分支），可以發布。`
+        : `⚠️ 讀得到 ${esc(info.full_name)}，但這個帳號沒有寫入權限。`;
+    } catch (e) { ghMsg.textContent = `❌ ${e.message}：${ghHint(e)}`; }
+  };
+  $('#gh-clear', el).onclick = () => { store.del('gt-gh-token'); $('#gh-token', el).value = ''; ghMsg.textContent = 'token 已從這台裝置移除。'; };
+  $('#bk-export', el).onclick = () => {
+    const data = structuredClone(cur());
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+    a.download = `guitar-treasure-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  };
+  $('#bk-import', el).onchange = async e => {
+    const file = e.target.files[0]; e.target.value = '';
+    if (!file) return;
+    try {
+      const data = normalize(JSON.parse(await file.text()));
+      if (!data.songs.length && !await confirmBox('這個備份裡沒有任何歌曲，確定要匯入嗎？')) return;
+      const dr = ensureDraft();
+      data.site.admin = data.site.admin || dr.data.site.admin;
+      data.site.github = data.site.github || dr.data.site.github;
+      dr.data = data;
+      dr.log.push(`匯入備份（${data.songs.length} 首）`);
+      gcDraftFiles();
+      await saveDraft(); render();
+      toast(`已匯入 ${data.songs.length} 首歌（草稿）`);
+    } catch (err) { toast('匯入失敗：' + esc(err.message), 'err'); }
+  };
+  $('#bk-discard', el).onclick = async () => {
+    if (!await confirmBox('確定要捨棄所有還沒發布的變更嗎？這個動作無法復原。', { ok: '捨棄', danger: true })) return;
+    m.close(); await discardDraft(); toast('已捨棄草稿，回到網站上的版本');
+  };
+}
+
+/* =========================================================
+   管理者：發布列與發布到 GitHub
+   ========================================================= */
+function renderPubBar() {
+  const bar = $('#pubbar');
+  if (!S.admin || !S.draft || S.pubbarHidden) { bar.hidden = true; return; }
+  bar.hidden = false;
+  if (S.draft.publishedRev) {
+    bar.innerHTML = `<span class="dot ok"></span><span class="txt">已發布！GitHub Pages 大約 1 分鐘後更新</span><button class="btn sm ghost" id="pb-ok">知道了</button>`;
+    $('#pb-ok').onclick = () => { S.pubbarHidden = true; renderPubBar(); };
+    return;
+  }
+  const n = S.draft.log.length;
+  const stale = S.pub.rev && S.draft.baseRev && S.pub.rev > S.draft.baseRev;
+  bar.innerHTML = `<span class="dot"></span><span class="txt"><b>${n}</b> 項變更還沒發布${stale ? '（⚠️ 網站在別處更新過）' : ''}</span>
+    <button class="btn sm ghost" id="pb-log">查看</button>
+    <button class="btn sm ghost" id="pb-discard">捨棄</button>
+    <button class="btn sm accent" id="pb-pub">${I('cloud')} 發布到網站</button>`;
+  $('#pb-log').onclick = () => modal({ title: '還沒發布的變更', body: `<ol class="loglist">${S.draft.log.map(l => `<li>${esc(l)}</li>`).join('')}</ol>`, foot: '<button class="btn" data-close>關閉</button>' });
+  $('#pb-discard').onclick = async () => {
+    if (await confirmBox('確定要捨棄這些還沒發布的變更嗎？', { ok: '捨棄', danger: true })) { await discardDraft(); toast('已捨棄草稿'); }
+  };
+  $('#pb-pub').onclick = publish;
+}
+
+let publishing = false;
+async function publish() {
+  if (publishing || !S.draft) return;
+  const cfg = ghConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) {
+    toast('第一次發布前，請先在「網站設定」填好 GitHub token', 'warn', 4500);
+    return openSettings('github');
+  }
+  publishing = true;
+  const dr = S.draft;
+  const data = structuredClone(dr.data);
+  data.rev = new Date().toISOString();
+  data.site.github = { owner: cfg.owner, repo: cfg.repo, branch: cfg.branch };
+  const used = collectPaths(data);
+  const uploads = Object.entries(dr.files).filter(([p]) => used.has(p));
+  const steps = ['連線 GitHub，讀取最新版本', `上傳檔案（${uploads.length} 個）`, '建立 commit', '更新網站分支'];
+  const m = modal({
+    title: '發布到網站', dismissible: false,
+    body: `<ol class="steps">${steps.map(t => `<li><span class="sdot"></span><span>${t}</span><em></em></li>`).join('')}</ol>
+      <div class="pbar"><i id="pbar"></i></div><div id="presult"></div>`,
+    foot: `<button class="btn" id="p-close" disabled>關閉</button>`,
+  });
+  const lis = $$('.steps li', m.el), bar = $('#pbar', m.el), closeBtn = $('#p-close', m.el);
+  closeBtn.onclick = () => m.close();
+  let at = -1;
+  const step = i => { if (at >= 0) lis[at].className = 'done'; at = i; lis[i].className = 'run'; bar.style.width = (i / steps.length * 100) + '%'; };
+  try {
+    const api = ghApi(cfg);
+    step(0);
+    const ref = await api(`git/ref/heads/${encodeURIComponent(cfg.branch)}`);
+    const baseCommit = await api(`git/commits/${ref.object.sha}`);
+    const baseTree = await api(`git/trees/${baseCommit.tree.sha}?recursive=1`);
+    const existing = new Set(baseTree.tree.filter(t => t.type === 'blob').map(t => t.path));
+
+    step(1);
+    const tree = [];
+    let k = 0;
+    for (const [path, blob] of uploads) {
+      const b = await api('git/blobs', { method: 'POST', body: { content: await toBase64(blob), encoding: 'base64' } });
+      tree.push({ path, mode: '100644', type: 'blob', sha: b.sha });
+      k++;
+      lis[1].querySelector('em').textContent = `${k}/${uploads.length}`;
+      bar.style.width = ((1 + k / Math.max(1, uploads.length)) / steps.length * 100) + '%';
+    }
+    tree.push({ path: 'data/songs.json', mode: '100644', type: 'blob', content: JSON.stringify(data, null, 2) + '\n' });
+    const removed = [...existing].filter(p => MANAGED.test(p) && !used.has(p));
+    for (const p of removed) tree.push({ path: p, mode: '100644', type: 'blob', sha: null });
+
+    step(2);
+    const newTree = await api('git/trees', { method: 'POST', body: { base_tree: baseCommit.tree.sha, tree } });
+    const log = dr.log.length ? dr.log : ['更新資料'];
+    const message = `網站更新：${log.slice(0, 4).join('、')}${log.length > 4 ? ` 等 ${log.length} 項` : ''}\n\n透過「小齊的吉他寶庫」管理介面發布`;
+    const commit = await api('git/commits', { method: 'POST', body: { message, tree: newTree.sha, parents: [ref.object.sha] } });
+
+    step(3);
+    await api(`git/refs/heads/${encodeURIComponent(cfg.branch)}`, { method: 'PATCH', body: { sha: commit.sha } });
+    lis[3].className = 'done'; bar.style.width = '100%';
+
+    dr.data = data; dr.publishedRev = data.rev; dr.log = [];
+    await saveDraft();
+    $('#presult', m.el).innerHTML = `<div class="result-box ok">✅ <b>發布成功！</b>共 ${uploads.length} 個檔案${removed.length ? `、清掉 ${removed.length} 個不用的舊檔` : ''}。<br>
+      GitHub Pages 通常 1 分鐘內會更新，屆時所有人都看得到。<br>
+      <a href="https://github.com/${esc(cfg.owner)}/${esc(cfg.repo)}/commit/${commit.sha}" target="_blank" rel="noopener">在 GitHub 查看這次的 commit ↗</a></div>`;
+    renderPubBar();
+  } catch (e) {
+    if (at >= 0) lis[at].className = 'fail';
+    $('#presult', m.el).innerHTML = `<div class="result-box bad">❌ <b>發布失敗</b>（${esc(e.message)}）<br>${ghHint(e)}<br><span class="hint">草稿還在，修正後可以再按一次發布。</span></div>`;
+  } finally {
+    publishing = false;
+    closeBtn.disabled = false;
+    closeBtn.classList.add('primary');
+  }
+}
+
+/* =========================================================
+   啟動
+   ========================================================= */
+async function boot() {
+  const theme = store.get('gt-theme', null);
+  if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+  S.admin = sess.get('gt-admin', false) === true;
+  renderTop();
+  try {
+    const r = await fetch('data/songs.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    S.pub = normalize(await r.json());
+  } catch (e) {
+    app.innerHTML = `<div class="wrap"><div class="panel load-err"><h2>歌曲資料載入失敗</h2>
+      <p>如果你是直接雙擊打開 <code>index.html</code>，瀏覽器會擋住讀取 <code>data/songs.json</code>。請改用 GitHub Pages 網址，或在資料夾裡執行 <code>python -m http.server</code> 再打開 <code>http://localhost:8000</code>。</p>
+      <p class="hint">錯誤訊息：${esc(e.message)}</p></div></div>`;
+    return;
+  }
+  const saved = await idb.get('draft');
+  if (saved && saved.data) {
+    if (saved.publishedRev && S.pub.rev && S.pub.rev >= saved.publishedRev) await idb.del('draft');
+    else { saved.data = normalize(saved.data); saved.files = saved.files || {}; saved.log = saved.log || []; S.draft = saved; }
+  }
+  render();
+}
+boot();
+})();
+</script>
+</body>
+</html>
