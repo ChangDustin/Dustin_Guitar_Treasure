@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "rev": "2026-10-19T11:28:15.566Z",
+  "rev": "2026-10-19T16:40:15.549Z",
   "site": {
     "title": "小齊的吉他寶庫",
     "subtitle": "每一首練過的歌，都值得被好好收藏",
@@ -33,10 +33,10 @@
       ],
       "cover": "assets/covers/summer.jpg",
       "pdf": {
-        "path": "assets/tabs/summer.pdf",
-        "pages": 1,
+        "path": "assets/tabs/summer-2ez2cw.pdf",
+        "pages": 2,
         "totalPages": 2,
-        "preview": true
+        "preview": false
       },
       "videos": [
         {
@@ -50,7 +50,7 @@
       },
       "notes": "電影《菊次郎的夏天》主題曲，Shin Izumi 的編曲。\n・標準調弦、Capo 2，♩ = 92\n・開頭整段 P.M.（悶音）分解和弦，右手掌根輕靠琴橋\n・中段的搥音（H）與勾音（P）要乾淨，不要搶拍",
       "createdAt": "2026-10-19T08:10:00.000Z",
-      "updatedAt": "2026-10-19T08:10:00.000Z"
+      "updatedAt": "2026-10-19T16:27:59.804Z"
     },
     {
       "id": "like-a-star",
@@ -69,10 +69,10 @@
       ],
       "cover": "assets/covers/like-a-star.jpg",
       "pdf": {
-        "path": "assets/tabs/like-a-star.pdf",
-        "pages": 2,
+        "path": "assets/tabs/like-a-star-jtvx7c.pdf",
+        "pages": 10,
         "totalPages": 10,
-        "preview": true
+        "preview": false
       },
       "videos": [
         {
@@ -90,7 +90,7 @@
       },
       "notes": "探吉日林慶義老師採譜，譜上有很詳細的左手運指。\n・特殊調弦：①=D ②=A ⑤=G ⑥=C（③④弦不變），Capo 2\n・♩ = 60，前奏是自由拍（Free time）\n・譜上有標運指的段落都是容易卡住的地方，先慢速練熟",
       "createdAt": "2026-10-19T08:20:00.000Z",
-      "updatedAt": "2026-10-19T11:17:30.615Z"
+      "updatedAt": "2026-10-19T16:27:47.864Z"
     },
     {
       "id": "river-flows-in-you",
@@ -109,10 +109,10 @@
       ],
       "cover": "assets/covers/river-flows-in-you.jpg",
       "pdf": {
-        "path": "assets/tabs/river-flows-in-you.pdf",
-        "pages": 2,
+        "path": "assets/tabs/river-flows-in-you-dzy81m.pdf",
+        "pages": 9,
         "totalPages": 9,
-        "preview": true
+        "preview": false
       },
       "videos": [
         {
@@ -126,7 +126,7 @@
       },
       "notes": "Sungha Jung 2022 年版本的編曲。\n・整把降半音（E♭ A♭ D♭ G♭ B♭ E♭），Capo 5，♩ = 67\n・前奏 C#m7 → Asus2 的分解和弦，要讓上方旋律音浮出來\n・Verse 開始旋律變密，先分手慢練再合起來",
       "createdAt": "2026-10-19T08:30:00.000Z",
-      "updatedAt": "2026-10-19T08:30:00.000Z"
+      "updatedAt": "2026-10-19T16:27:36.163Z"
     },
     {
       "title": "something just like this",
@@ -140,10 +140,10 @@
       "tags": [],
       "cover": "assets/covers/something-just-like-this-wnb409.jpg",
       "pdf": {
-        "path": "assets/tabs/something-just-like-this-y5engo.pdf",
-        "pages": 2,
+        "path": "assets/tabs/something-just-like-this-kdk4kl.pdf",
+        "pages": 7,
         "totalPages": 7,
-        "preview": true
+        "preview": false
       },
       "videos": [
         {
@@ -158,7 +158,7 @@
       "notes": "",
       "id": "something-just-like-this",
       "createdAt": "2026-10-19T10:14:57.867Z",
-      "updatedAt": "2026-10-19T10:20:43.559Z"
+      "updatedAt": "2026-10-19T16:27:20.180Z"
     },
     {
       "title": "first love 簡單版",
@@ -172,7 +172,7 @@
       "tags": [],
       "cover": "assets/covers/first-love-e25awq.jpg",
       "pdf": {
-        "path": "assets/tabs/first-love-hv8h9k.pdf",
+        "path": "assets/tabs/first-love-cf3aw7.pdf",
         "pages": 3,
         "totalPages": 3,
         "preview": false
@@ -190,7 +190,7 @@
       "notes": "",
       "id": "first-love",
       "createdAt": "2026-10-19T10:19:44.278Z",
-      "updatedAt": "2026-10-19T10:20:33.869Z"
+      "updatedAt": "2026-10-19T16:27:09.507Z"
     },
     {
       "title": "grand escape",
@@ -204,10 +204,10 @@
       "tags": [],
       "cover": "assets/covers/grand-escape-s6ll70.jpg",
       "pdf": {
-        "path": "assets/tabs/grand-escape-kiioa9.pdf",
-        "pages": 2,
+        "path": "assets/tabs/grand-escape-kz6s8s.pdf",
+        "pages": 18,
         "totalPages": 18,
-        "preview": true
+        "preview": false
       },
       "videos": [
         {
@@ -222,7 +222,7 @@
       "notes": "",
       "id": "grand-escape",
       "createdAt": "2026-10-19T10:23:06.765Z",
-      "updatedAt": "2026-10-19T11:17:40.575Z"
+      "updatedAt": "2026-10-19T16:26:56.696Z"
     },
     {
       "title": "First Love 較難版",
@@ -236,7 +236,7 @@
       "tags": [],
       "cover": "assets/covers/first-love-2-6ccikt.jpg",
       "pdf": {
-        "path": "assets/tabs/first-love-2-ymfvch.pdf",
+        "path": "assets/tabs/first-love-2-dphax1.pdf",
         "pages": 2,
         "totalPages": 2,
         "preview": false
@@ -254,7 +254,7 @@
       "notes": "",
       "id": "first-love-2",
       "createdAt": "2026-10-19T11:04:29.355Z",
-      "updatedAt": "2026-10-19T11:10:04.791Z"
+      "updatedAt": "2026-10-19T16:26:42.019Z"
     },
     {
       "title": "小さな恋のうた (高木同學)",
@@ -267,7 +267,12 @@
       "bpm": null,
       "tags": [],
       "cover": "assets/covers/song-d2n4b-p74frx.jpg",
-      "pdf": null,
+      "pdf": {
+        "path": "assets/tabs/song-d2n4b-5ogntd.pdf",
+        "pages": 5,
+        "totalPages": 5,
+        "preview": false
+      },
       "videos": [
         {
           "label": "(TAB有)MONGOL800「小さな恋のうた」Fingerstyle solo guitar By龍藏Ryuzo",
@@ -281,7 +286,7 @@
       "notes": "",
       "id": "song-d2n4b",
       "createdAt": "2026-10-19T11:06:00.881Z",
-      "updatedAt": "2026-10-19T11:06:00.881Z"
+      "updatedAt": "2026-10-19T16:26:26.597Z"
     },
     {
       "title": "yong kai - blue",
@@ -295,7 +300,7 @@
       "tags": [],
       "cover": "assets/covers/yong-kai-blue-hfm2um.jpg",
       "pdf": {
-        "path": "assets/tabs/yong-kai-blue-astxkd.pdf",
+        "path": "assets/tabs/yong-kai-blue-kt3ubw.pdf",
         "pages": 3,
         "totalPages": 3,
         "preview": false
@@ -313,7 +318,7 @@
       "notes": "",
       "id": "yong-kai-blue",
       "createdAt": "2026-10-19T11:09:48.501Z",
-      "updatedAt": "2026-10-19T11:09:48.501Z"
+      "updatedAt": "2026-10-19T16:25:58.111Z"
     },
     {
       "title": "Payphone - Maroon 5",
@@ -327,10 +332,10 @@
       "tags": [],
       "cover": "assets/covers/payphone-maroon-5-kic2bn.jpg",
       "pdf": {
-        "path": "assets/tabs/payphone-maroon-5-9hgmrx.pdf",
-        "pages": 2,
+        "path": "assets/tabs/payphone-maroon-5-p0hd7f.pdf",
+        "pages": 8,
         "totalPages": 8,
-        "preview": true
+        "preview": false
       },
       "videos": [
         {
@@ -345,7 +350,7 @@
       "notes": "",
       "id": "payphone-maroon-5",
       "createdAt": "2026-10-19T11:11:50.607Z",
-      "updatedAt": "2026-10-19T11:11:50.607Z"
+      "updatedAt": "2026-10-19T16:25:42.803Z"
     },
     {
       "title": "Lost Game HELLO WORLD",
@@ -359,10 +364,10 @@
       "tags": [],
       "cover": "assets/covers/lost-game-hello-world-tviu24.jpg",
       "pdf": {
-        "path": "assets/tabs/lost-game-hello-world-tmebs5.pdf",
-        "pages": 2,
+        "path": "assets/tabs/lost-game-hello-world-g3v1kf.pdf",
+        "pages": 5,
         "totalPages": 5,
-        "preview": true
+        "preview": false
       },
       "videos": [
         {
@@ -377,7 +382,7 @@
       "notes": "",
       "id": "lost-game-hello-world",
       "createdAt": "2026-10-19T11:15:36.955Z",
-      "updatedAt": "2026-10-19T11:15:36.955Z"
+      "updatedAt": "2026-10-19T16:25:27.884Z"
     },
     {
       "title": "always wirh me",
@@ -391,10 +396,10 @@
       "tags": [],
       "cover": "assets/covers/always-wirh-me-4gomf4.jpg",
       "pdf": {
-        "path": "assets/tabs/always-wirh-me-xqr76f.pdf",
-        "pages": 2,
+        "path": "assets/tabs/always-wirh-me-2e88i7.pdf",
+        "pages": 10,
         "totalPages": 10,
-        "preview": true
+        "preview": false
       },
       "videos": [
         {
@@ -409,7 +414,167 @@
       "notes": "",
       "id": "always-wirh-me",
       "createdAt": "2026-10-19T11:16:52.455Z",
-      "updatedAt": "2026-10-19T11:17:00.201Z"
+      "updatedAt": "2026-10-19T16:24:57.457Z"
+    },
+    {
+      "title": "白色相簿-插曲",
+      "artist": "",
+      "arranger": "",
+      "level": "中進階",
+      "status": "想學",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-3uinr-knndv1.jpg",
+      "pdf": {
+        "path": "assets/tabs/song-3uinr-w9z58i.pdf",
+        "pages": 5,
+        "totalPages": 5,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "TODOKANAI KOI - White Album 2",
+          "url": "https://www.youtube.com/watch?v=M51upQJHdB4&list=RDM51upQJHdB4&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-3uinr",
+      "createdAt": "2026-10-19T16:23:33.309Z",
+      "updatedAt": "2026-10-19T16:23:33.309Z"
+    },
+    {
+      "title": "大丈夫 / RADWIMPS - Weathering With You",
+      "artist": "",
+      "arranger": "",
+      "level": "中進階",
+      "status": "想學",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/radwimps-weathering-with-you-0wmk26.jpg",
+      "pdf": {
+        "path": "assets/tabs/radwimps-weathering-with-you-vwmezv.pdf",
+        "pages": 7,
+        "totalPages": 7,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "(天気の子)大丈夫 / RADWIMPS - Weathering With You(Fingerstyle guitar cover)",
+          "url": "https://www.youtube.com/watch?v=Ujgd6g4-0No"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "radwimps-weathering-with-you",
+      "createdAt": "2026-10-19T16:31:05.972Z",
+      "updatedAt": "2026-10-19T16:31:05.972Z"
+    },
+    {
+      "title": "Time travel",
+      "artist": "",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/time-travel-81eio3.jpg",
+      "pdf": {
+        "path": "assets/tabs/time-travel-84rtv6.pdf",
+        "pages": 3,
+        "totalPages": 3,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "附譜教學《Time travel》岸部真明 Masaaki Kishibe｜指彈吉他曲｜『悶音神曲』｜吉他教學 Full Tutorial with TAB【 木的教室】",
+          "url": "https://www.youtube.com/watch?v=C018m0lhPbQ&t=690s"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "time-travel",
+      "createdAt": "2026-10-19T16:34:17.315Z",
+      "updatedAt": "2026-10-19T16:34:17.315Z"
+    },
+    {
+      "title": "穿越時空的思念-犬夜叉",
+      "artist": "",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-6xxhy-szr8me.jpg",
+      "pdf": {
+        "path": "assets/tabs/song-6xxhy-sjvogd.pdf",
+        "pages": 3,
+        "totalPages": 3,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "犬夜叉 跨越時代的思念 時代を越える想い Affections Touching Across Time 吉他 【guitar solo】",
+          "url": "https://www.youtube.com/watch?v=GWXfv-Qh__Y&list=RDGWXfv-Qh__Y&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-6xxhy",
+      "createdAt": "2026-10-19T16:37:20.841Z",
+      "updatedAt": "2026-10-19T16:37:20.841Z"
+    },
+    {
+      "title": "紫羅蘭永恆花園",
+      "artist": "",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-rv7u8-3lbtqj.jpg",
+      "pdf": {
+        "path": "assets/tabs/song-rv7u8-1dk1ps.pdf",
+        "pages": 9,
+        "totalPages": 9,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "Violet Evergarden OST Medley",
+          "url": "https://www.youtube.com/watch?v=jaiy8NOrGak&list=RDjaiy8NOrGak&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-rv7u8",
+      "createdAt": "2026-10-19T16:40:03.652Z",
+      "updatedAt": "2026-10-19T16:40:03.652Z"
     }
   ]
 }
