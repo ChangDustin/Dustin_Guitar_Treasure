@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "rev": "2026-10-19T08:30:00.000Z",
+  "rev": "2026-10-19T11:28:15.566Z",
   "site": {
     "title": "小齊的吉他寶庫",
     "subtitle": "每一首練過的歌，都值得被好好收藏",
@@ -10,8 +10,8 @@
       "branch": "main"
     },
     "admin": {
-      "salt": "v+CYctdvZaDkFZz5dNSWXA==",
-      "hash": "nD+CAQ8zRGdqNQOnR9bb8uk5XSLFnJp1KdkqDLyPs+w=",
+      "salt": "/wjZo5SL1o9DxvxMqA1ueA==",
+      "hash": "MkQnK0uJOQtneGNBhVEEG1CI6qOLqLlzx7lIeYsBOPY=",
       "iter": 150000
     }
   },
@@ -58,7 +58,7 @@
       "artist": "Youngso Kim 金永所",
       "arranger": "林慶義 Chi-Yi Lin（探吉日）",
       "level": "高階",
-      "status": "想學",
+      "status": "練習中",
       "tuning": "特殊調弦：①D ②A ⑤G ⑥C",
       "capo": 2,
       "bpm": 60,
@@ -90,7 +90,7 @@
       },
       "notes": "探吉日林慶義老師採譜，譜上有很詳細的左手運指。\n・特殊調弦：①=D ②=A ⑤=G ⑥=C（③④弦不變），Capo 2\n・♩ = 60，前奏是自由拍（Free time）\n・譜上有標運指的段落都是容易卡住的地方，先慢速練熟",
       "createdAt": "2026-10-19T08:20:00.000Z",
-      "updatedAt": "2026-10-19T08:20:00.000Z"
+      "updatedAt": "2026-10-19T11:17:30.615Z"
     },
     {
       "id": "river-flows-in-you",
@@ -127,6 +127,289 @@
       "notes": "Sungha Jung 2022 年版本的編曲。\n・整把降半音（E♭ A♭ D♭ G♭ B♭ E♭），Capo 5，♩ = 67\n・前奏 C#m7 → Asus2 的分解和弦，要讓上方旋律音浮出來\n・Verse 開始旋律變密，先分手慢練再合起來",
       "createdAt": "2026-10-19T08:30:00.000Z",
       "updatedAt": "2026-10-19T08:30:00.000Z"
+    },
+    {
+      "title": "something just like this",
+      "artist": "金永所",
+      "arranger": "",
+      "level": "中進階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/something-just-like-this-wnb409.jpg",
+      "pdf": {
+        "path": "assets/tabs/something-just-like-this-y5engo.pdf",
+        "pages": 2,
+        "totalPages": 7,
+        "preview": true
+      },
+      "videos": [
+        {
+          "label": "something just like this",
+          "url": "https://www.youtube.com/watch?v=h6icoMn8Coc&t=5s"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "something-just-like-this",
+      "createdAt": "2026-10-19T10:14:57.867Z",
+      "updatedAt": "2026-10-19T10:20:43.559Z"
+    },
+    {
+      "title": "first love 簡單版",
+      "artist": "",
+      "arranger": "",
+      "level": "中階",
+      "status": "已學會",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/first-love-e25awq.jpg",
+      "pdf": {
+        "path": "assets/tabs/first-love-hv8h9k.pdf",
+        "pages": 3,
+        "totalPages": 3,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "first love",
+          "url": "https://www.youtube.com/watch?v=m3nEICCeMio&list=RDm3nEICCeMio&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "first-love",
+      "createdAt": "2026-10-19T10:19:44.278Z",
+      "updatedAt": "2026-10-19T10:20:33.869Z"
+    },
+    {
+      "title": "grand escape",
+      "artist": "Sungha Jung",
+      "arranger": "",
+      "level": "中進階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/grand-escape-s6ll70.jpg",
+      "pdf": {
+        "path": "assets/tabs/grand-escape-kiioa9.pdf",
+        "pages": 2,
+        "totalPages": 18,
+        "preview": true
+      },
+      "videos": [
+        {
+          "label": "grand escape",
+          "url": "https://www.youtube.com/watch?v=8-BeWeG3kdg&list=RD8-BeWeG3kdg&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "grand-escape",
+      "createdAt": "2026-10-19T10:23:06.765Z",
+      "updatedAt": "2026-10-19T11:17:40.575Z"
+    },
+    {
+      "title": "First Love 較難版",
+      "artist": "",
+      "arranger": "",
+      "level": "中進階",
+      "status": "想學",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/first-love-2-6ccikt.jpg",
+      "pdf": {
+        "path": "assets/tabs/first-love-2-ymfvch.pdf",
+        "pages": 2,
+        "totalPages": 2,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "【TAB】 First Love - 宇多田ヒカル - FingerStyle Guitar ソロギター【タブ】",
+          "url": "https://www.youtube.com/watch?v=tvDPirfmnIU&list=RDtvDPirfmnIU&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "first-love-2",
+      "createdAt": "2026-10-19T11:04:29.355Z",
+      "updatedAt": "2026-10-19T11:10:04.791Z"
+    },
+    {
+      "title": "小さな恋のうた (高木同學)",
+      "artist": "",
+      "arranger": "",
+      "level": "中進階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-d2n4b-p74frx.jpg",
+      "pdf": null,
+      "videos": [
+        {
+          "label": "(TAB有)MONGOL800「小さな恋のうた」Fingerstyle solo guitar By龍藏Ryuzo",
+          "url": "https://www.youtube.com/watch?v=VVYcBNXVO90&list=RDVVYcBNXVO90&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-d2n4b",
+      "createdAt": "2026-10-19T11:06:00.881Z",
+      "updatedAt": "2026-10-19T11:06:00.881Z"
+    },
+    {
+      "title": "yong kai - blue",
+      "artist": "",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/yong-kai-blue-hfm2um.jpg",
+      "pdf": {
+        "path": "assets/tabs/yong-kai-blue-astxkd.pdf",
+        "pages": 3,
+        "totalPages": 3,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "yung kai - blue | TAB",
+          "url": "https://www.youtube.com/watch?v=qp9U-c_ubCI&list=RDqp9U-c_ubCI&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "yong-kai-blue",
+      "createdAt": "2026-10-19T11:09:48.501Z",
+      "updatedAt": "2026-10-19T11:09:48.501Z"
+    },
+    {
+      "title": "Payphone - Maroon 5",
+      "artist": "",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/payphone-maroon-5-kic2bn.jpg",
+      "pdf": {
+        "path": "assets/tabs/payphone-maroon-5-9hgmrx.pdf",
+        "pages": 2,
+        "totalPages": 8,
+        "preview": true
+      },
+      "videos": [
+        {
+          "label": "Payphone - Maroon 5 | Fingerstyle Guitar | TAB + Chords + Lyrics",
+          "url": "https://www.youtube.com/watch?v=p5JBvL4aPFU&list=RDp5JBvL4aPFU&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "payphone-maroon-5",
+      "createdAt": "2026-10-19T11:11:50.607Z",
+      "updatedAt": "2026-10-19T11:11:50.607Z"
+    },
+    {
+      "title": "Lost Game HELLO WORLD",
+      "artist": "",
+      "arranger": "",
+      "level": "中進階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/lost-game-hello-world-tviu24.jpg",
+      "pdf": {
+        "path": "assets/tabs/lost-game-hello-world-tmebs5.pdf",
+        "pages": 2,
+        "totalPages": 5,
+        "preview": true
+      },
+      "videos": [
+        {
+          "label": "【HELLO WORLD OST】 \"Lost Game\" by Nulbarich - Fingerstyle Guitar Cover",
+          "url": "https://www.youtube.com/watch?v=1k6eBMdA1Ok&list=RD1k6eBMdA1Ok&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "lost-game-hello-world",
+      "createdAt": "2026-10-19T11:15:36.955Z",
+      "updatedAt": "2026-10-19T11:15:36.955Z"
+    },
+    {
+      "title": "always wirh me",
+      "artist": "Sungha Jung",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/always-wirh-me-4gomf4.jpg",
+      "pdf": {
+        "path": "assets/tabs/always-wirh-me-xqr76f.pdf",
+        "pages": 2,
+        "totalPages": 10,
+        "preview": true
+      },
+      "videos": [
+        {
+          "label": "(Spirited Away) Always With Me - Sungha Jung",
+          "url": "https://www.youtube.com/watch?v=EIcwEj9uzkk&list=RDEIcwEj9uzkk&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "always-wirh-me",
+      "createdAt": "2026-10-19T11:16:52.455Z",
+      "updatedAt": "2026-10-19T11:17:00.201Z"
     }
   ]
 }
