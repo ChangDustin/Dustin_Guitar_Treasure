@@ -1084,6 +1084,8 @@ function mountFretboard() {
 function countUp(root) {
   $$('[data-count]', root).forEach(el => {
     const to = +el.dataset.count, t0 = performance.now(), dur = 900 + Math.min(to, 50) * 8;
+    el.textContent = to;   // 先放正確數字：分頁在背景時動畫不會跑，也不會卡在 0
+    if (document.hidden) return;
     const step = t => {
       const k = Math.min(1, (t - t0) / dur);
       el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
@@ -1137,10 +1139,10 @@ function renderHome() {
         <h1>${esc(title.slice(0, split))}<span>${esc(title.slice(split))}</span></h1>
         <p class="lead">${esc(d.site.subtitle || '')}</p>
         <div class="stats">
-          <div><b data-count="${songs.length}">0</b><span>收錄曲目</span></div>
-          <div><b data-count="${learned}">0</b><span>已學會</span></div>
-          <div><b data-count="${practicing}">0</b><span>練習中</span></div>
-          <div><b data-count="${pages}">0</b><span>樂譜頁數</span></div>
+          <div><b data-count="${songs.length}">${songs.length}</b><span>收錄曲目</span></div>
+          <div><b data-count="${learned}">${learned}</b><span>已學會</span></div>
+          <div><b data-count="${practicing}">${practicing}</b><span>練習中</span></div>
+          <div><b data-count="${pages}">${pages}</b><span>樂譜頁數</span></div>
         </div>
       </div>
       ${fretboardHTML()}
