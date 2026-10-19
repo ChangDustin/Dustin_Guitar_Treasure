@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "rev": "2026-10-19T16:40:15.549Z",
+  "rev": "2026-10-19T18:24:30.738Z",
   "site": {
     "title": "小齊的吉他寶庫",
     "subtitle": "每一首練過的歌，都值得被好好收藏",
@@ -57,7 +57,7 @@
       "title": "Like A Star",
       "artist": "Youngso Kim 金永所",
       "arranger": "林慶義 Chi-Yi Lin（探吉日）",
-      "level": "高階",
+      "level": "中進階",
       "status": "練習中",
       "tuning": "特殊調弦：①D ②A ⑤G ⑥C",
       "capo": 2,
@@ -90,7 +90,7 @@
       },
       "notes": "探吉日林慶義老師採譜，譜上有很詳細的左手運指。\n・特殊調弦：①=D ②=A ⑤=G ⑥=C（③④弦不變），Capo 2\n・♩ = 60，前奏是自由拍（Free time）\n・譜上有標運指的段落都是容易卡住的地方，先慢速練熟",
       "createdAt": "2026-10-19T08:20:00.000Z",
-      "updatedAt": "2026-10-19T16:27:47.864Z"
+      "updatedAt": "2026-10-19T18:24:17.702Z"
     },
     {
       "id": "river-flows-in-you",
@@ -388,7 +388,7 @@
       "title": "always wirh me",
       "artist": "Sungha Jung",
       "arranger": "",
-      "level": "中階",
+      "level": "中進階",
       "status": "練習中",
       "tuning": "標準調弦（Standard）",
       "capo": 0,
@@ -414,7 +414,7 @@
       "notes": "",
       "id": "always-wirh-me",
       "createdAt": "2026-10-19T11:16:52.455Z",
-      "updatedAt": "2026-10-19T16:24:57.457Z"
+      "updatedAt": "2026-10-19T18:23:48.689Z"
     },
     {
       "title": "白色相簿-插曲",
@@ -575,6 +575,262 @@
       "id": "song-rv7u8",
       "createdAt": "2026-10-19T16:40:03.652Z",
       "updatedAt": "2026-10-19T16:40:03.652Z"
+    },
+    {
+      "title": "人生的旋轉木馬",
+      "artist": "南澤大介",
+      "arranger": "",
+      "level": "中階",
+      "status": "已學會",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-f1t1f-8moo6p.jpg",
+      "pdf": {
+        "path": "assets/tabs/song-f1t1f-1ia6t3.pdf",
+        "pages": 3,
+        "totalPages": 3,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "人生のメリーゴーランド（ハウルの動く城より）／南澤大介",
+          "url": "https://www.youtube.com/watch?v=30M8hevIGGs&list=RD30M8hevIGGs&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-f1t1f",
+      "createdAt": "2026-10-19T18:02:02.803Z",
+      "updatedAt": "2026-10-19T18:17:02.065Z"
+    },
+    {
+      "title": "always with me",
+      "artist": "南澤大介",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/always-with-me-jr7ukd.jpg",
+      "pdf": {
+        "path": "assets/tabs/always-with-me-apqja8.pdf",
+        "pages": 2,
+        "totalPages": 2,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "いつも何度でも（千と千尋の神隠しより）／南澤大介",
+          "url": "https://www.youtube.com/watch?v=jtAFWUDc_zw&list=RDjtAFWUDc_zw&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "always-with-me",
+      "createdAt": "2026-10-19T18:07:41.476Z",
+      "updatedAt": "2026-10-19T18:07:41.476Z"
+    },
+    {
+      "title": "看見海的街道-魔女宅急便",
+      "artist": "南澤大介",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-jru6y-1mno9m.jpg",
+      "pdf": {
+        "path": "assets/tabs/song-jru6y-6vjyb1.pdf",
+        "pages": 2,
+        "totalPages": 2,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "海の見える街（魔女の宅急便より）／南澤大介",
+          "url": "https://www.youtube.com/watch?v=xq9qTRVjVZ4&list=RDxq9qTRVjVZ4&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-jru6y",
+      "createdAt": "2026-10-19T18:14:17.138Z",
+      "updatedAt": "2026-10-19T18:14:17.138Z"
+    },
+    {
+      "title": "痴心絕對",
+      "artist": "董運昌",
+      "arranger": "",
+      "level": "中階",
+      "status": "已學會",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-rvz3v-v12m2i.jpg",
+      "pdf": {
+        "path": "assets/tabs/song-rvz3v-swrz6v.pdf",
+        "pages": 3,
+        "totalPages": 3,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "癡心絕對（李聖傑）吉他改編、演奏 - 董運昌",
+          "url": "https://www.youtube.com/watch?v=HBmGeLGBqKQ&list=RDHBmGeLGBqKQ&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-rvz3v",
+      "createdAt": "2026-10-19T18:16:29.498Z",
+      "updatedAt": "2026-10-19T18:16:52.876Z"
+    },
+    {
+      "title": "童話",
+      "artist": "董運昌",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-01rws-x5ncpt.jpg",
+      "pdf": {
+        "path": "assets/tabs/song-01rws-tm6fi7.pdf",
+        "pages": 3,
+        "totalPages": 3,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "童話 （光良）吉他改編、演奏 - 董運昌",
+          "url": "https://www.youtube.com/watch?v=_zatINveCZc&list=RD_zatINveCZc&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-01rws",
+      "createdAt": "2026-10-19T18:18:36.643Z",
+      "updatedAt": "2026-10-19T18:18:36.643Z"
+    },
+    {
+      "title": "遇見",
+      "artist": "董運昌",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-1dl9j-d3c69o.jpg",
+      "pdf": {
+        "path": "assets/tabs/song-1dl9j-2tysfg.pdf",
+        "pages": 4,
+        "totalPages": 4,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "遇見 （孫燕姿）吉他改編、演奏 - 董運昌",
+          "url": "https://www.youtube.com/watch?v=RB4JWWVr0eY&list=RDRB4JWWVr0eY&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-1dl9j",
+      "createdAt": "2026-10-19T18:20:08.644Z",
+      "updatedAt": "2026-10-19T18:20:08.644Z"
+    },
+    {
+      "title": "孤單北半球",
+      "artist": "董運昌",
+      "arranger": "",
+      "level": "中階",
+      "status": "練習中",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/song-7o39e-ziz936.jpg",
+      "pdf": {
+        "path": "assets/tabs/song-7o39e-mzlric.pdf",
+        "pages": 4,
+        "totalPages": 4,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "孤單北半球 （林依晨）吉他改編、演奏 - 董運昌",
+          "url": "https://www.youtube.com/watch?v=Z46zJgsyuQU&list=RDZ46zJgsyuQU&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "song-7o39e",
+      "createdAt": "2026-10-19T18:21:44.056Z",
+      "updatedAt": "2026-10-19T18:22:07.640Z"
+    },
+    {
+      "title": "my heart will go on",
+      "artist": "董運昌",
+      "arranger": "",
+      "level": "中進階",
+      "status": "想學",
+      "tuning": "標準調弦（Standard）",
+      "capo": 0,
+      "bpm": null,
+      "tags": [],
+      "cover": "assets/covers/my-heart-will-go-on-jzxarb.jpg",
+      "pdf": {
+        "path": "assets/tabs/my-heart-will-go-on-0v7dab.pdf",
+        "pages": 4,
+        "totalPages": 4,
+        "preview": false
+      },
+      "videos": [
+        {
+          "label": "TITANIC - My Heart Will Go On (Céline Dion) - arrange for solo guitar by Dong Yun-Chang",
+          "url": "https://www.youtube.com/watch?v=1d1lyJ6pECo&list=RD1d1lyJ6pECo&start_radio=1"
+        }
+      ],
+      "source": {
+        "name": "",
+        "url": ""
+      },
+      "notes": "",
+      "id": "my-heart-will-go-on",
+      "createdAt": "2026-10-19T18:23:31.588Z",
+      "updatedAt": "2026-10-19T18:23:31.588Z"
     }
   ]
 }
